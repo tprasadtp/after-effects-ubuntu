@@ -531,6 +531,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#installing-snap-packages" title="Installing Snap packages" class="md-nav__link">
+    Installing Snap packages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#all-in-one" title="All In one" class="md-nav__link">
     All In one
   </a>
@@ -757,6 +764,13 @@
         <li class="md-nav__item">
   <a href="#reset-repositories-purge-ppas" title="Reset repositories / Purge PPAs" class="md-nav__link">
     Reset repositories / Purge PPAs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-snap-packages" title="Installing Snap packages" class="md-nav__link">
+    Installing Snap packages
   </a>
   
 </li>
@@ -1051,6 +1065,14 @@ This task requires <code class="codehilite">python-pip package</code> is install
 <div class="admonition bug">
 <p class="admonition-title">Scope of this function</p>
 <p>This will <strong>NOT</strong> remove PPAs or repositories you have added manually or those added while installing DEB files.</p>
+</div>
+<h2 id="installing-snap-packages">Installing Snap packages<a class="headerlink" href="#installing-snap-packages" title="Permanent link">&para;</a></h2>
+<p>Script can install snap packages from snapstore. For example check the default config file.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>List mode does not support installing snap packages. Its responsibility of the user to separate classic
+snaps, edge and normal snaps. You should specify the classic snaps under <code class="codehilite">install.snaps.calssic</code>,
+edge snaps under <code class="codehilite">install.snaps.edge</code> and noral snaps under <code class="codehilite">install.snaps.normal</code> in the yaml file.</p>
 </div>
 <h2 id="all-in-one">All In one<a class="headerlink" href="#all-in-one" title="Permanent link">&para;</a></h2>
 <p>This will perform Following actions. (In the following order)</p>

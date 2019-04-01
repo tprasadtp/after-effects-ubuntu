@@ -5,8 +5,8 @@
         "report": false
     },
     "version": {
-        "changelog": "Support for ROS & Duo-Unix repo, Cosmic+Tessa",
-        "name": "5.3.7",
-        "number": 537
+        "changelog": "Support installing snap Packages, Removed support for 14.04 Trusty",
+        "name": "5.4.0",
+        "number": 540
     }
 }

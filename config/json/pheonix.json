@@ -5,15 +5,15 @@
             "docker": true,
             "google": true,
             "googlecloud": true,
-            "insync": true,
-            "kubernetes": false,
-            "mendeley": false,
+            "insync": false,
+            "kubernetes": true,
+            "mendeley": true,
             "ros": true,
             "signal": false,
             "skype": true,
             "spotify": true,
             "vscode": true,
-            "winehq": false
+            "winehq": true
         },
         "flags": {
             "auto_yes": true,
@@ -23,12 +23,19 @@
         "install": {
             "apt": {
                 "administration": [
+                    "dconf-editor",
                     "htop",
                     "apt-xapian-index",
+                    "gdebi",
                     "gparted",
                     "synaptic",
                     "bleachbit",
-                    "tree"
+                    "tree",
+                    "stow",
+                    "gnome-logs",
+                    "gnome-system-monitor",
+                    "gnome-calculator",
+                    "gnome-usage"
                 ],
                 "development": [
                     "curl",
@@ -36,9 +43,12 @@
                     "spyder3",
                     "git",
                     "shellcheck",
+                    "ocl-icd-dev",
+                    "opencl-headers",
                     "clinfo",
                     "vainfo",
                     "vdpauinfo",
+                    "s3cmd",
                     "python3-pip"
                 ],
                 "external": [
@@ -58,10 +68,10 @@
                     "ubuntu-restricted-extras",
                     "ubuntu-restricted-addons",
                     "unrar",
+                    "timeshift",
                     "limesuite",
                     "liblimesuite-dev",
-                    "limesuite-udev",
-                    "gnome-tweak-tool"
+                    "limesuite-udev"
                 ],
                 "multimedia": [
                     "audacity",
@@ -76,13 +86,19 @@
                     "cheese"
                 ],
                 "other": [
+                    "gnome-online-miners",
+                    "evolution",
                     "gnuradio",
                     "gqrx-sdr",
                     "gr-radar",
                     "gr-radar-doc",
+                    "gnome-boxes",
+                    "gnome-tweaks",
                     "opensc",
+                    "pcscd",
                     "scdaemon",
                     "zsh",
+                    "seahorse-nautilus",
                     "cmake",
                     "libboost-all-dev",
                     "swig",
@@ -108,17 +124,11 @@
                     "libsoapysdr-doc",
                     "virt-manager",
                     "virt-viewer",
-                    "libvirt-daemon-system",
-                    "lm-sensors",
-                    "imwheel",
-                    "chrome-gnome-shell",
-                    "gnome-logs",
-                    "gnome-system-monitor",
-                    "gnome-calculator",
-                    "gnome-usage",
-                    "seahorse-nautilus"
+                    "libvirt-daemon-system"
                 ],
                 "productivity": [
+                    "evolution",
+                    "realmd",
                     "pandoc-data",
                     "pandoc",
                     "texstudio",
@@ -143,20 +153,15 @@
                 ]
             },
             "binaries": [
-                "https://github.com/docker/compose/releases/download/1.23.0/docker-compose-linux-x86_64,docker-compose"
+                "https://github.com/docker/compose/releases/download/1.20.0/docker-compose-linux-x86_64,docker-compose"
             ],
             "debian_packages": [
                 "https://atom-installer.github.com/v1.35.1/atom-amd64.deb,Atom-Editor.deb"
-            ],
-            "python3": [
-                "troposphere",
-                "coloredlogs",
-                "awacs",
-                "awscli"
             ]
         },
         "ppa": [
             "ppa:yubico/stable",
+            "ppa:teejee2008/ppa",
             "ppa:myriadrf/drivers"
         ],
         "purge": [
@@ -178,6 +183,6 @@
             "upgrade": true
         }
     },
-    "name": "Polaris",
+    "name": "Pheonix-Server",
     "version": 5
 }

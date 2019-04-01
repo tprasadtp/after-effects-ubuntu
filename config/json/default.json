@@ -102,8 +102,16 @@
                 "https://github.com/kubernetes/kompose/releases/download/v1.15.0/kompose-linux-amd64,kompose"
             ],
             "debian_packages": [
-                "https://atom-installer.github.com/v1.32.2/atom-amd64.deb,Atom-Editor.deb"
-            ]
+                "https://atom-installer.github.com/v1.35.1/atom-amd64.deb,Atom-Editor.deb"
+            ],
+            "snaps": {
+                "classic": [
+                    "vscode"
+                ],
+                "normal": [
+                    "htop"
+                ]
+            }
         },
         "ppa": [
             "ppa:yubico/stable",
@@ -124,6 +132,7 @@
             "ppa": true,
             "purge": true,
             "repo": true,
+            "snaps": true,
             "update": true,
             "upgrade": true
         }
