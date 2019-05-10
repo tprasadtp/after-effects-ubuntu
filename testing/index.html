@@ -551,16 +551,7 @@
 </div>
 <p>Following Tests are done on Travis-CI.</p>
 <ul>
-<li><code class="codehilite">shellcheck</code> every executable bash script (Job #build.1)</li>
-<li>Test on Ubuntu Cosmic (Job #build.2)</li>
-<li>Test on Ubuntu Bionic Beaver (Job #build.3)</li>
-<li>Test on Ubuntu Xenial (Job #build.4)</li>
-<li>Test on Ubuntu Trusty (Host) (Job #build.5)</li>
-<li>Test on Debian 9 Stretch (Job #build.6)</li>
-<li>Test on Debian 8 Jessie (Job #build.7)</li>
-<li>Test on Ubuntu Disco 19.04 (Job #build.8 can fail)</li>
-<li>Test on Debian 10 Buster (Job #build.9 can fail)</li>
-<li>Build, Test &amp; deploy documentation (Job #build.10).</li>
+<li><code class="codehilite"><span class="n">shellcheck</span></code> every executable bash script, Test on all supported Ubuntu and Debian distros</li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -570,15 +561,15 @@
 </ul>
 </div>
 <ul>
-<li>Tests on Disco Dingo use base image from <code class="codehilite">http://cdimage.ubuntu.com/ubuntu-base/daily/</code></li>
-<li>Dockerfiles used for building the image are in <code class="codehilite">/dockerfiles</code> directory, they use official Ubuntu base images with script dependencies.</li>
-<li>Test scripts are located in <code class="codehilite">/tests</code> directory.</li>
+<li>Tests on Disco Dingo use base image from <code class="codehilite"><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">cdimage</span><span class="p">.</span><span class="n">ubuntu</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">-</span><span class="n">base</span><span class="o">/</span><span class="n">daily</span><span class="o">/</span></code></li>
+<li>Dockerfiles used for building the image are in <code class="codehilite"><span class="o">/</span><span class="n">dockerfiles</span></code> directory, they use official Ubuntu base images with script dependencies.</li>
+<li>Test scripts are located in <code class="codehilite"><span class="o">/</span><span class="n">tests</span></code> directory.</li>
 <li>Since its a time consuming process only simulated install is done on CI. Linux mint and Elementary are not tested in containers.</li>
 <li>It is possible that there might be some errors specific to your setup. Please report if so. It is <strong>Strongly</strong> advised to try install apps and deb files in simulate mode first before proceeding with actual installation.</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p><strong>Never</strong> set environment variable <code class="codehilite">CI=true</code> or <code class="codehilite">TRAVIS=true</code>, unless you are running in a CI environment or are sure of its effects.</p>
+<p><strong>Never</strong> set environment variable <code class="codehilite"><span class="n">CI</span><span class="o">=</span><span class="k">true</span></code> or <code class="codehilite"><span class="n">TRAVIS</span><span class="o">=</span><span class="k">true</span></code>, unless you are running in a CI environment or are sure of its effects.</p>
 </div>
                 
                   

@@ -3,14 +3,14 @@
     "config": {
         "add_repo": {
             "docker": true,
-            "duo": true,
-            "gcsfuse": true,
+            "duo": false,
+            "gcsfuse": false,
             "google": true,
             "googlecloud": true,
             "insync": true,
             "kubernetes": false,
             "mendeley": false,
-            "ros": true,
+            "ros": false,
             "signal": false,
             "skype": true,
             "spotify": true,
@@ -52,7 +52,6 @@
                     "spotify-client",
                     "code",
                     "google-cloud-sdk",
-                    "gcsfuse",
                     "docker-ce"
                 ],
                 "multimedia": [

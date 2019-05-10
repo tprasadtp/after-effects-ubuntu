@@ -803,7 +803,7 @@
 <h2 id="configuration-type">Configuration type<a class="headerlink" href="#configuration-type" title="Permanent link">&para;</a></h2>
 <p>You have two options of configuring this script.</p>
 <ul>
-<li>Using .list files in <code class="codehilite">data</code></li>
+<li>Using .list files in <code class="codehilite"><span class="k">data</span></code></li>
 </ul>
 <div class="codehilite"><pre><span></span><span class="go">  ./after-effects --lists</span>
 </pre></div>
@@ -833,9 +833,9 @@
 </details>
 <p>Following details should explain the behavior of this flag. Please do have a look at exceptions, as all tasks cannot be simulated.</p>
 <ul>
-<li>This option will simulate installing packages mentioned in the lists, using the apt-get in-built dry-run option <code class="codehilite">apt-get install -s</code> to simulate the installation of packages. Nothing will be downloaded except repository metadata (deb files if option is chosen). Packages will not be installed.</li>
+<li>This option will simulate installing packages mentioned in the lists, using the apt-get in-built dry-run option <code class="codehilite"><span class="n">apt</span><span class="o">-</span><span class="k">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">s</span></code> to simulate the installation of packages. Nothing will be downloaded except repository metadata (deb files if option is chosen). Packages will not be installed.</li>
 <li>This option can be used to check if the files in the lists are compatible/available in the repository.</li>
-<li>Installation of DEB files also behaves similarly. It uses <code class="codehilite">dpkg -i --dry-run</code> to simulate installation.</li>
+<li>Installation of DEB files also behaves similarly. It uses <code class="codehilite"><span class="n">dpkg</span> <span class="o">-</span><span class="n">i</span> <span class="c1">--dry-run</span></code> to simulate installation.</li>
 <li>Its a very good idea to simulate installation when you have reconfigured the apps and packages in the list to check what might be error prone.</li>
 <li>In case of DEB package files, they <strong>will</strong> be downloaded unlike apt-get package installs.</li>
 </ul>
@@ -879,10 +879,10 @@
 <p>Usually it takes a while for additional Repositories (Docker, Google Cloud SDK etc) to add support for latest release of Ubuntu. However we can use the previous release for which packages are available. So, using packages built for previous release works fine most of the time. This is also good fix if you are running a alpha or beta release of Ubuntu. These options only work on Ubuntu or distros using ubuntu codenames and Linux Mint. They <strong>DO NOT</strong> work on Debian.</p>
 <ul>
 <li>By default this option is disabled.</li>
-<li>Use <code class="codehilite">sudo ./after-effects -f</code> or <code class="codehilite">sudo ./after-effects --fix</code> to enable this.</li>
+<li>Use <code class="codehilite"><span class="n">sudo</span> <span class="p">.</span><span class="o">/</span><span class="k">after</span><span class="o">-</span><span class="n">effects</span> <span class="o">-</span><span class="n">f</span></code> or <code class="codehilite"><span class="n">sudo</span> <span class="p">.</span><span class="o">/</span><span class="k">after</span><span class="o">-</span><span class="n">effects</span> <span class="c1">--fix</span></code> to enable this.</li>
 <li>Repositories like Spotify and Google Chrome do not use code names in their repository URLs. So the above workaround is not necessary.</li>
 <li>Derivatives of Ubuntu will use the code name of Ubuntu on which they are based. For example Linux mint 18.2 Serena will use code name xenial since it is based on Ubuntu 16.04 Xenial Xerus</li>
-<li>This option applies only for the latest release mentioned in the variable <code class="codehilite">code_name_latest_release</code>. and will be ignored if the release is not latest.</li>
+<li>This option applies only for the latest release mentioned in the variable <code class="codehilite"><span class="n">code_name_latest_release</span></code>. and will be ignored if the release is not latest.</li>
 <li>Variables in current version are (As of Dec 2017) change them if necessary.</li>
 </ul>
 <div class="codehilite"><pre><span></span><span class="nb">readonly</span> <span class="nv">code_name_latest_release</span><span class="o">=</span><span class="s2">&quot;bionic&quot;</span>
@@ -891,9 +891,9 @@
 </pre></div>
 
 <details class="danger"><summary>Note for Pre-Release/ development version of Ubuntu</summary><ul>
-<li>If you are using a pre-release version of Ubuntu, you can use <code class="codehilite">--pre-release</code> flag to apply the above mentioned fix to pre-release version of Ubuntu.</li>
-<li>This flag can be used independent of <code class="codehilite">--fix</code>. If both are used together then both flags will be applied if the release is upcoming-release.</li>
-<li>If the release is stable, only <code class="codehilite">--fix</code> flag will be valid and <code class="codehilite">--pre-release</code> is ignored.</li>
+<li>If you are using a pre-release version of Ubuntu, you can use <code class="codehilite"><span class="c1">--pre-release</span></code> flag to apply the above mentioned fix to pre-release version of Ubuntu.</li>
+<li>This flag can be used independent of <code class="codehilite"><span class="c1">--fix</span></code>. If both are used together then both flags will be applied if the release is upcoming-release.</li>
+<li>If the release is stable, only <code class="codehilite"><span class="c1">--fix</span></code> flag will be valid and <code class="codehilite"><span class="c1">--pre-release</span></code> is ignored.</li>
 <li>This is how it works:  If the repositories are  not available for latest stable release as well, go back a release. Ex. If the pre-release is 18.04 and the repositories is not available for 17.10 as well, we use 17.04 repositories. Usually happens in first few days of development cycle of 18.04.</li>
 </ul>
 </details>
@@ -908,7 +908,7 @@
 </pre></div>
 
 </div>
-<p>From v3.0 onward, you will be asked for confirmation before performing the task selected. If you would like to bypass this on a CI environments like TRAVIS or for any other reason, you can do so by running the script with <code class="codehilite">sudo ./after-effects -y</code> or <code class="codehilite">sudo ./after-effects --yes</code></p>
+<p>From v3.0 onward, you will be asked for confirmation before performing the task selected. If you would like to bypass this on a CI environments like TRAVIS or for any other reason, you can do so by running the script with <code class="codehilite"><span class="n">sudo</span> <span class="p">.</span><span class="o">/</span><span class="k">after</span><span class="o">-</span><span class="n">effects</span> <span class="o">-</span><span class="n">y</span></code> or <code class="codehilite"><span class="n">sudo</span> <span class="p">.</span><span class="o">/</span><span class="k">after</span><span class="o">-</span><span class="n">effects</span> <span class="c1">--yes</span></code></p>
 <h2 id="purge-not-required-packages">Purge not required packages<a class="headerlink" href="#purge-not-required-packages" title="Permanent link">&para;</a></h2>
 <div class="admonition snippet">
 <p class="admonition-title">Usage</p>
@@ -942,7 +942,7 @@
 <p>Just a quick way to delete logs generated by this script.</p>
 <div class="admonition warning">
 <p class="admonition-title">Flag priority</p>
-<p>If you pass <code class="codehilite">-l</code> in the beginning rest of the commands will be ignored, as the script exits after deleting the log!</p>
+<p>If you pass <code class="codehilite"><span class="o">-</span><span class="n">l</span></code> in the beginning rest of the commands will be ignored, as the script exits after deleting the log!</p>
 </div>
 <h2 id="keep-downloaded-deb-files">Keep downloaded DEB files<a class="headerlink" href="#keep-downloaded-deb-files" title="Permanent link">&para;</a></h2>
 <div class="admonition snippet">
@@ -964,7 +964,7 @@ Default behavior is to clean apt cache and delete downloaded DEB packages.</p>
 <h2 id="hide-remotelocal-yaml-configuration-data">Hide Remote/local YAML configuration data<a class="headerlink" href="#hide-remotelocal-yaml-configuration-data" title="Permanent link">&para;</a></h2>
 <div class="admonition snippet">
 <p class="admonition-title">Usage</p>
-<div class="codehilite"><pre><span></span>./after-effects --hide-config
+<div class="codehilite"><pre><span></span><span class="p">.</span><span class="o">/</span><span class="k">after</span><span class="o">-</span><span class="n">effects</span> <span class="c1">--hide-config</span>
 </pre></div>
 
 </div>
@@ -992,9 +992,9 @@ Default behavior is to clean apt cache and delete downloaded DEB packages.</p>
 </pre></div>
 
 </div>
-<p>You can prefer using custom configuration file you have stored locally [It should be available via local paths or network share. not via ftp or http]. Enabling this option will disable fetching remote configuration even if you have specified <code class="codehilite">--remote-yaml</code></p>
+<p>You can prefer using custom configuration file you have stored locally [It should be available via local paths or network share. not via ftp or http]. Enabling this option will disable fetching remote configuration even if you have specified <code class="codehilite"><span class="c1">--remote-yaml</span></code></p>
 <h2 id="use-custom-version-information-file">Use Custom Version information file<a class="headerlink" href="#use-custom-version-information-file" title="Permanent link">&para;</a></h2>
-<p>Script always checks if its running the latest version available. If not it throws an error and exits. If you wish to skip that, please use <code class="codehilite">--no-version-check</code>. This is always recommended over using a custom version information file. However it is possible to provide a custom version info file, a YAML file which holds version information.</p>
+<p>Script always checks if its running the latest version available. If not it throws an error and exits. If you wish to skip that, please use <code class="codehilite"><span class="c1">--no-version-check</span></code>. This is always recommended over using a custom version information file. However it is possible to provide a custom version info file, a YAML file which holds version information.</p>
 <div class="admonition snippet">
 <p class="admonition-title">Usage</p>
 <div class="codehilite"><pre><span></span><span class="go">./after-effects --version-file &lt;filename&gt;</span>
@@ -1005,7 +1005,7 @@ Default behavior is to clean apt cache and delete downloaded DEB packages.</p>
 </pre></div>
 
 </div>
-<p>Example version file is in <code class="codehilite">config</code> directory. All the fields are mandatory.</p>
+<p>Example version file is in <code class="codehilite"><span class="n">config</span></code> directory. All the fields are mandatory.</p>
 <h2 id="remote-yaml-configuration-file">Remote YAML configuration file<a class="headerlink" href="#remote-yaml-configuration-file" title="Permanent link">&para;</a></h2>
 <div class="admonition snippet">
 <p class="admonition-title">Usage</p>
@@ -1017,7 +1017,7 @@ Default behavior is to clean apt cache and delete downloaded DEB packages.</p>
 </pre></div>
 
 </div>
-<p>You can specify YAML file to use. Script will fetch it and parse it. Please note that local Config file specified takes priority over <code class="codehilite">-R</code>. If both -C &amp; -R are used, only local config file is considered. The file should be available without any soft of interactive logins.</p>
+<p>You can specify YAML file to use. Script will fetch it and parse it. Please note that local Config file specified takes priority over <code class="codehilite"><span class="o">-</span><span class="n">R</span></code>. If both -C &amp; -R are used, only local config file is considered. The file should be available without any soft of interactive logins.</p>
 <h2 id="do-not-report-statistics">Do not report statistics<a class="headerlink" href="#do-not-report-statistics" title="Permanent link">&para;</a></h2>
 <div class="admonition snippet">
 <p class="admonition-title">Usage</p>
@@ -1061,8 +1061,8 @@ to access it. The mirror may not work or be up-to date with upstream. Use this o
 and know what versions/libs are hosted on the mirror.</p>
 </div>
 <ul>
-<li>Uses mirrors from <code class="codehilite">University of Freiburg</code>. Only available for limited number of repositories. <strong>DO NOT</strong> use this option if you are not a faculty or student of Uni-Freiburg, as it may have un-intended side effects.</li>
-<li>Arguments: <code class="codehilite">-u</code> or <code class="codehilite">--use-uf-mirror</code>. Because I do not wish to waste bandwidth this option is not tested on Travis builds.</li>
+<li>Uses mirrors from <code class="codehilite"><span class="n">University</span> <span class="k">of</span> <span class="n">Freiburg</span></code>. Only available for limited number of repositories. <strong>DO NOT</strong> use this option if you are not a faculty or student of Uni-Freiburg, as it may have un-intended side effects.</li>
+<li>Arguments: <code class="codehilite"><span class="o">-</span><span class="n">u</span></code> or <code class="codehilite"><span class="c1">--use-uf-mirror</span></code>. Because I do not wish to waste bandwidth this option is not tested on Travis builds.</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>

@@ -682,14 +682,14 @@
 
 <blockquote>
 <p>URL redirects to file with last known good commit on GitHub. It is cached &amp; proxies to GitHub at CDN level. If you are paranoid, use git.
-If you wish to use master branch pass <code class="codehilite">--master</code> or <code class="codehilite">-m</code> as an argument. Eg: <code class="codehilite">wget -Nnv https://ae.prasadt.com/get -O - | bash -s --master</code></p>
+If you wish to use master branch pass <code class="codehilite"><span class="c1">--master</span></code> or <code class="codehilite"><span class="o">-</span><span class="n">m</span></code> as an argument. Eg: <code class="codehilite"><span class="n">wget</span> <span class="o">-</span><span class="n">Nnv</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">ae</span><span class="p">.</span><span class="n">prasadt</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="k">get</span> <span class="o">-</span><span class="n">O</span> <span class="o">-</span> <span class="o">|</span> <span class="n">bash</span> <span class="o">-</span><span class="n">s</span> <span class="c1">--master</span></code></p>
 </blockquote>
 <h4 id="with-git">With Git<a class="headerlink" href="#with-git" title="Permanent link">&para;</a></h4>
 <p>If you already have git on your system, you can use,</p>
 <div class="codehilite"><pre><span></span><span class="go">git clone https://github.com/tprasadtp/ubuntu-post-install.git &amp;&amp; cd ubuntu-post-install</span>
 </pre></div>
 
-<p>If you already have cloned the repo, you can use <code class="codehilite">git pull</code> to get the latest changes.</p>
+<p>If you already have cloned the repo, you can use <code class="codehilite"><span class="n">git</span> <span class="n">pull</span></code> to get the latest changes.</p>
 <blockquote>
 <p>This will use master branch which may not be as stable as versioned releases.</p>
 </blockquote>
@@ -711,7 +711,7 @@ Please see <a href="https://ae.prasadt.com/config/#package-lists">Configuration<
 
 <details class="warning" open="open"><summary>Note for using this script inside docker containers</summary><ul>
 <li>If you are running this in a docker container, you probably are root.</li>
-<li>Its possible that you might be missing <code class="codehilite">sudo</code> package. So In that case just run it as <code class="codehilite">./after-effects</code>. Be warned! You probably are missing several dependencies of the script!</li>
+<li>Its possible that you might be missing <code class="codehilite"><span class="n">sudo</span></code> package. So In that case just run it as <code class="codehilite"><span class="p">.</span><span class="o">/</span><span class="k">after</span><span class="o">-</span><span class="n">effects</span></code>. Be warned! You probably are missing several dependencies of the script!</li>
 </ul>
 </details>
                 

@@ -651,10 +651,10 @@
 <h2 id="support-for-fedora-scientific-linux-open-suse-rhel-centos-put-your-favorite-distro">Support for Fedora/ Scientific Linux / Open SUSE / RHEL/ CentOS / put your favorite distro<a class="headerlink" href="#support-for-fedora-scientific-linux-open-suse-rhel-centos-put-your-favorite-distro" title="Permanent link">&para;</a></h2>
 <p>Its in the pipeline, but I cannot guarantee anything. Since I do not use anything other than Open SUSE very often, so it might take a while. But you can modify this script very easily to achieve that. You need to do the following things,</p>
 <ul>
-<li>Replace apt-get commands with their equivalents (<code class="codehilite">dnf</code> or <code class="codehilite">zypper</code> or <code class="codehilite">yum</code> etc).</li>
+<li>Replace apt-get commands with their equivalents (<code class="codehilite"><span class="n">dnf</span></code> or <code class="codehilite"><span class="n">zypper</span></code> or <code class="codehilite"><span class="n">yum</span></code> etc).</li>
 <li>Replace/Modify package names.</li>
 <li>Change add-repositories function to point to .repo files.</li>
-<li>Change <code class="codehilite">dpkg</code> to <code class="codehilite">rpm</code> equivalents.</li>
+<li>Change <code class="codehilite"><span class="n">dpkg</span></code> to <code class="codehilite"><span class="n">rpm</span></code> equivalents.</li>
 <li>Since v5.0 Debian is supported.</li>
 </ul>
 <h2 id="to-do">To-Do<a class="headerlink" href="#to-do" title="Permanent link">&para;</a></h2>
@@ -670,17 +670,17 @@
 <p><em>Note This applies ONLY if you are using the script from sigma server. This does <strong>NOT APPLY</strong> for any GitHub branches/tags/releases.</em></p>
 </blockquote>
 <ul>
-<li><strong>DO NOT</strong> use Github version of <code class="codehilite">get-after-effects.sh</code> to get the script. Please follow the instructions in SETUP.MD [ Only preset on sigma server]. Several packages &amp; some settings need to be manually configured to point to internal repositories &amp; mirrors. Bootstrap function will automatically setup things for you.</li>
+<li><strong>DO NOT</strong> use Github version of <code class="codehilite"><span class="k">get</span><span class="o">-</span><span class="k">after</span><span class="o">-</span><span class="n">effects</span><span class="p">.</span><span class="n">sh</span></code> to get the script. Please follow the instructions in SETUP.MD [ Only preset on sigma server]. Several packages &amp; some settings need to be manually configured to point to internal repositories &amp; mirrors. Bootstrap function will automatically setup things for you.</li>
 <li>Groups &amp; NFS mounts are also handled by bootstrap function.</li>
-<li>Currently Github branches do not report stats and <code class="codehilite">report_stats</code> is just a placeholder.</li>
+<li>Currently Github branches do not report stats and <code class="codehilite"><span class="n">report_stats</span></code> is just a placeholder.</li>
 <li>If you are using the script from sigma server, stats are reported by default unless you disable them. UUID is <strong>NOT</strong> random for each run and is based on MAC address of one of your Ethernet devices.(If you have many) &amp; hostname.</li>
-<li>Scripts have same version number and are always in sync with Github. You can identify the difference by looking at REL_NAME. Release name has <code class="codehilite">-sigma</code> appended to it. To see release number &amp; name use <code class="codehilite">./after-effects -v</code>. You do not have to run this as <em>root</em>.</li>
+<li>Scripts have same version number and are always in sync with Github. You can identify the difference by looking at REL_NAME. Release name has <code class="codehilite"><span class="o">-</span><span class="n">sigma</span></code> appended to it. To see release number &amp; name use <code class="codehilite"><span class="p">.</span><span class="o">/</span><span class="k">after</span><span class="o">-</span><span class="n">effects</span> <span class="o">-</span><span class="n">v</span></code>. You do not have to run this as <em>root</em>.</li>
 </ul>
 <h3 id="security">Security<a class="headerlink" href="#security" title="Permanent link">&para;</a></h3>
 <p>Well, this isn't very secure or meant to be.</p>
 <ul>
 <li>Verify the checksums on Github/Releases or Sigma Server.</li>
-<li>You can verify them manually or via <code class="codehilite">./after-effects --verify</code>. Public Keys should be already in your keyring.</li>
+<li>You can verify them manually or via <code class="codehilite"><span class="p">.</span><span class="o">/</span><span class="k">after</span><span class="o">-</span><span class="n">effects</span> <span class="c1">--verify</span></code>. Public Keys should be already in your keyring.</li>
 </ul>
                 
                   
