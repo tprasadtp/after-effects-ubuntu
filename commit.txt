@@ -1,6 +1,3 @@
-SRC Commit ID  : 3a76683
-SRC Message    : Disco stable support (#19)
-
-* Add eon support, promote disco to stable
-* GCSFUSE config is now decoupled from googlecloudsdk
+SRC Commit ID  : f487ce4
+SRC Message    : update readme
 Built from     : master

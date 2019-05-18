@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "After-Effects\n\n\nAn effortless post install script for Ubuntu \n\n\nWhy\n\n\nUpgrading a Linux machine comes with lot of headache. Somethings might break, somethings might not work or you might just want to\nstart fresh. Beauty of Linux is almost everything is scriptable. Re-installing is just a matter of putting your favorite distribution on USB, install and configuring it. If you do it often and over a fleet of machines, then its a pain. You can run a few scripts to automate it, but they are not so flexible. A package changed its name? PPA not available for the current release? You need to edit your script, test it and run it.\n\n\nHow\n\n\nWhat if your script could be \"configured\"? Just add the package you want to install to your config file. No need to search through code to do it. Separating your preferences and package lists from the script frees you from writing the script every time a new release comes around. This project helps you do just that. Its poor man's Chef. Most of your preferences and configurations are separate from script.\n\n\nReally? A shell-script?\n\n\n\n\nYes! Because it has almost zero dependencies. No need to have Python or Ruby or other dependencies. Someone can edit it to fit their needs too.\n\n\nHow to\n\n\nSee \nGetting Started\n.\n\n\nSupported Distros\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nI have not tested the script on following distros. Because they use ubuntu as their base,\nIt should work fine. But no promises.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\nPlease check \nSupported-Distros\n for complete list of supported distros.\n\n\n\n\nFeatures\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nScreenshots", 
+            "text": "After-Effects\n\n\nAn effortless post install script for Ubuntu \n\n\nWhy\n\n\nUpgrading a Linux machine comes with lot of headache. Somethings might break, somethings might not work or you might just want to\nstart fresh. Beauty of Linux is almost everything is scriptable. Re-installing is just a matter of putting your favorite distribution on USB, install and configuring it. If you do it often and over a fleet of machines, then its a pain. You can run a few scripts to automate it, but they are not so flexible. A package changed its name? PPA not available for the current release? You need to edit your script, test it and run it.\n\n\nHow\n\n\nWhat if your script could be \"configured\"? Just add the package you want to install to your config file. No need to search through code to do it. Separating your preferences and package lists from the script frees you from writing the script every time a new release comes around. This project helps you do just that. Its poor man's Chef/ansible.\n\n\nReally? A shell-script?\n\n\n\n\nYes! No need to have Python or Ruby or other dependencies. Someone can edit it to fit their needs too.\n\n\nHow to\n\n\nSee \nGetting Started\n.\n\n\nSupported Distros\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nI have not tested the script on following distros. Because they use ubuntu as their base,\nIt should work fine. But no promises.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\nPlease check \nSupported-Distros\n for complete list of supported distros.\n\n\n\n\nFeatures\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nScreenshots", 
             "title": "Introduction"
         }, 
         {
@@ -17,12 +17,12 @@
         }, 
         {
             "location": "/#how", 
-            "text": "What if your script could be \"configured\"? Just add the package you want to install to your config file. No need to search through code to do it. Separating your preferences and package lists from the script frees you from writing the script every time a new release comes around. This project helps you do just that. Its poor man's Chef. Most of your preferences and configurations are separate from script.", 
+            "text": "What if your script could be \"configured\"? Just add the package you want to install to your config file. No need to search through code to do it. Separating your preferences and package lists from the script frees you from writing the script every time a new release comes around. This project helps you do just that. Its poor man's Chef/ansible.", 
             "title": "How"
         }, 
         {
             "location": "/#really-a-shell-script", 
-            "text": "Yes! Because it has almost zero dependencies. No need to have Python or Ruby or other dependencies. Someone can edit it to fit their needs too.", 
+            "text": "Yes! No need to have Python or Ruby or other dependencies. Someone can edit it to fit their needs too.", 
             "title": "Really? A shell-script?"
         }, 
         {
