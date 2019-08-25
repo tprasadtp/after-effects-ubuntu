@@ -5,8 +5,8 @@
         "report": false
     },
     "version": {
-        "changelog": "Support for Ubuntu 19.04",
-        "name": "5.4.1",
-        "number": 541
+        "changelog": "fix ROS, Spotify keys",
+        "name": "5.4.2",
+        "number": 542
     }
 }
