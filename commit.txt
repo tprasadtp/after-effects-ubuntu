@@ -1,3 +1,5 @@
-SRC Commit ID  : 1d9c436
-SRC Message    : Fix ROS, Spotify Keys (#20)
+SRC Commit ID  : 873ba40
+SRC Message    : fix classic snaps (#22)
+
+* fix classic snaps
 Built from     : master

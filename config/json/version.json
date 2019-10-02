@@ -5,8 +5,8 @@
         "report": false
     },
     "version": {
-        "changelog": "fix ROS, Spotify keys",
-        "name": "5.4.2",
-        "number": 542
+        "changelog": "fix classic snap install, fix ROS, Spotify keys",
+        "name": "5.4.3",
+        "number": 543
     }
 }
