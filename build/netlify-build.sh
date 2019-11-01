@@ -20,6 +20,7 @@
 # Else, deploy to banches anyway for testing purposes..
 set -e # halt script on error
 DEPLOY_PARAM=./_site/deploy-params.txt
+DEPLOY_PARAM_JSON=./_site/deploy.json
 spacing_string="%-15s"
 #Constants
 DATE=$(date +%Y-%m-%d:%H:%M:%S)
@@ -45,6 +46,26 @@ function gen_metadata()
   echo ">>--------------------------- End Build Metadata ----------------------------------<<" >>${DEPLOY_PARAM}
   #shellcheck disable=SC2129
   cat ${DEPLOY_PARAM}
+
+  cat <<EOT > "${DEPLOY_PARAM_JSON}"
+{
+  "commit": {
+    "id": "${COMMIT_REF:0:7}",
+    "msg": "${TRAVIS_COMMIT_MESSAGE:-NA}",
+    "branch": "${TRAVIS_BRANCH:-NA}",
+    "pr": "${PULL_REQUEST:-NA}"
+  },
+  "build": {
+    "builder": "netlify",
+    "context": "${CONTEXT:-NA}",
+    "delploy_url": "${DEPLOY_URL:-NA}",
+    "deploy_prime_url": "${DEPLOY_PRIME_URL:-NA}",
+    "number": "${TRAVIS_BUILD_NUMBER:-NA}",
+    "tag": "${BRANCH:-none}"
+  },
+  "ts": "$(date)"
+}
+EOT
 }
 
 
@@ -79,7 +100,7 @@ function jekyll_production()
 
   COMMIT_SHA_MASTER="$(cat COMMIT_SHA.txt)"
 
-  echo "Replace placceholder with master SHA1 commit"
+  echo "Replace placeholder with master SHA1 commit"
   sed -i s/PLACEHOLDER_REDIRECT/${COMMIT_SHA_MASTER}/g netlify.toml
 
 }
@@ -94,15 +115,12 @@ function jekyll_branch()
 
   echo "---> Building Website with Branch"
   mkdocs build;
-  echo "---> Convering to JSON"
-  mkdir -p ./config/json
+
+  echo "---> Linting YAML Files"
   for file in ./config/*.yml;
   do
-    printf "Linting & Converting File  to JSON : ${file}\n"
-    file_name_json=$(basename ./config/"${file}" .yml)
-    file_name_json+=".json"
-    yamllint "${file}" && yml2json "${file}" | python -m json.tool > ./config/json/"${file_name_json}"
-    index=$((index + 1))
+    printf "Linting : ${file}\n"
+    yamllint "${file}"
   done
   echo "---> Copying Config Files"
   rsync -Ea --recursive ./config/ ./_site/config/ && echo "Done!"
@@ -129,7 +147,7 @@ EOF
 
 function install_dependencies()
 {
-  pip install -r ./dockerfiles/mkdocs/requirements.txt
+  pip install -r ./docs/requirements.txt
   mkdocs --version
   #bundle install
 }

@@ -1,0 +1,12 @@
+{
+  "commit": {
+    "id": "27b53f3",
+    "msg": "switch to dplv2",
+    "branch": "master"
+  },
+  "build": {
+    "number": "593",
+    "tag": "none"
+  }
+  "ts": "Fri Nov  1 22:58:35 UTC 2019"
+}
