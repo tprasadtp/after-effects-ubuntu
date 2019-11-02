@@ -1,12 +1,12 @@
 {
   "commit": {
-    "id": "e0cf703",
-    "msg": "doc updates",
+    "id": "c44768a",
+    "msg": "fix pip deps",
     "branch": "master"
   },
   "build": {
-    "number": "599",
+    "number": "601",
     "tag": "none"
   }
-  "ts": "Sat Nov  2 11:29:44 UTC 2019"
+  "ts": "Sat Nov  2 13:46:44 UTC 2019"
 }
