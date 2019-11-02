@@ -977,7 +977,7 @@
 </tr>
 </tbody>
 </table>
-<details class="tip"><summary>Using <code class="codehilite"><span class="c1">--fix</span></code> falg</summary><p>Please note that the above repositories are sometimes not updated for latest Ubuntu release and most certainly will not be available for upcoming release of Ubuntu(Alpha/Beta). It might take some time till the repositories are available for the latest release. Use -f or --fix command line option or --pre-release in case you are using a Development version of ubuntu to revert using latest available version of repositories (usually previous Ubuntu release or in case of Beta/Alpha latest stable release of ubuntu). <a href="/clioptions/#fix-for-latest-ubuntu-releases">For more info see command line options.</a></p>
+<details class="tip"><summary>Using <code class="codehilite"><span class="c1">--fix</span></code> falg</summary><p>Please note that the above repositories are sometimes not updated for latest Ubuntu release and most certainly will not be available for upcoming release of Ubuntu(Alpha/Beta). It might take some time till the repositories are available for the latest release. Use -f or --fix command line option or --pre-release in case you are using a Development version of ubuntu to revert using latest available version of repositories (usually previous Ubuntu release or in case of Beta/Alpha latest stable release of Ubuntu). <a href="/clioptions/#fix-for-latest-ubuntu-releases">For more info see command line options.</a></p>
 </details>
 <details class="tip"><summary>Controlling which repository is added using config file</summary><p>You can set your YML file to decide which repository is added. Some repositories may no be supported on your architecture or distribution. Take a look at <a href="/api/yaml">config.yml</a> for example. If you omit a value, it defaults to false <strong>ALWAYS</strong>. Do note that if you are using lists default values are different, they are mentioned in below.</p>
 </details>
@@ -1025,11 +1025,33 @@
 <div class="admonition warning">
 <p class="admonition-title">ROS Releases &amp; Ubuntu/Debian versions</p>
 <ul>
-<li>ROS releases only support certain Ubuntu/Debian distributions. Please use appropriate packages to install depending on
+<li>ROS repository only support certain Ubuntu/Debian distributions. Please use appropriate packages to install depending on
 your distro/version. You can find more info at <a href="http://wiki.ros.org/ROS/Installation">ROS-Wiki</a></li>
 <li>Though Ubuntu derivatives might work, they are not supported.</li>
 </ul>
 </div>
+<p>Example yaml configuration snippet is given below.</p>
+<div class="codehilite"><pre><span></span><span class="n">config</span><span class="p">:</span>
+  <span class="o">#</span> <span class="n">Enabled</span> <span class="n">Tasks</span>
+  <span class="n">tasks</span><span class="p">:</span>
+    <span class="k">update</span><span class="p">:</span> <span class="k">true</span>
+    <span class="o">#</span> <span class="k">Add</span> <span class="n">Repos</span>
+    <span class="o">#</span> <span class="n">individual</span> <span class="n">repos</span> <span class="n">flags</span> <span class="k">are</span> <span class="n">mentioned</span> <span class="k">under</span> <span class="n">config</span><span class="p">.</span><span class="n">add_repo</span> <span class="k">key</span>
+    <span class="n">repo</span><span class="p">:</span> <span class="k">true</span>
+  <span class="o">#</span> <span class="n">Repository</span> <span class="n">Flags</span>
+  <span class="n">add_repo</span><span class="p">:</span>
+    <span class="n">winehq</span><span class="p">:</span> <span class="k">true</span>
+    <span class="n">docker</span><span class="p">:</span> <span class="k">true</span>
+    <span class="n">mendeley</span><span class="p">:</span> <span class="k">false</span>
+    <span class="n">googlecloud</span><span class="p">:</span> <span class="k">true</span>
+    <span class="n">spotify</span><span class="p">:</span> <span class="k">true</span>
+    <span class="n">vscode</span><span class="p">:</span> <span class="k">true</span>
+    <span class="n">skype</span><span class="p">:</span> <span class="k">true</span>
+    <span class="n">signal</span><span class="p">:</span> <span class="k">false</span>
+    <span class="n">insync</span><span class="p">:</span> <span class="k">true</span>
+    <span class="n">google</span><span class="p">:</span> <span class="k">true</span>
+</pre></div>
+
 <h3 id="canonical-partner-repositories">Canonical partner repositories<a class="headerlink" href="#canonical-partner-repositories" title="Permanent link">&para;</a></h3>
 <p>Canonical partner repositories are not configured or enabled for derivatives of Ubuntu because thee might be some conflicts.</p>
 <div class="admonition bug">
@@ -1062,17 +1084,16 @@ your distro/version. You can find more info at <a href="http://wiki.ros.org/ROS/
 <li>administration - Contains Administrative packages</li>
 <li>security - Contains Security related tools and packages</li>
 <li>productivity - Office tools, writing tools, LateX, document tools and other
-productivity tools, Email clients, browsers, IM clients etc.
-Example : LateX, TeXStudio, Libre office, pandoc empathy, Thunderbird</li>
+productivity tools, Email clients, browsers, IM clients etc.</li>
 <li>multimedia - Multimedia tools like media players, audio converters and playes etc.</li>
 <li>development - IDEs [Spyder, Jetbeans etc], languages [go, python, ruby, rust, java etc],
 Containers [docker lxc rkt etc], Python libraries, compilers [gcc, clang]
 SDKs [AWS SDK, Google Cloud SDK, open-jdk, Tensor Flow], headers and libraries[ocl-icd-dev],
 Anything related to development and -dev or -devl packages.</li>
 <li>other - Everything which does not fit in the above categories.
-Themes, Tools, Utilities like htop etc.</li>
+Themes, Tools, Utilities etc.</li>
 <li>external - Any packages which are provided by ppas, or repositories not present in
-base [K/L/Ed/X]-Ubuntu distribution. There's a possibility that the repository might not
+base Ubuntu distribution. There's a possibility that the repository might not
 be added or may be unavailable or offline. So Keeping the list separate from
 others packages minimizes errors if there are any.</li>
 </ol>
@@ -1097,6 +1118,12 @@ purged from the system. Make sure that all the packages in the lists are availab
 <div class="codehilite"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">atom</span><span class="o">-</span><span class="n">installer</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">v1</span><span class="p">.</span><span class="mi">21</span><span class="p">.</span><span class="mi">1</span><span class="o">/</span><span class="n">atom</span><span class="o">-</span><span class="n">amd64</span><span class="p">.</span><span class="n">deb</span><span class="p">,</span><span class="n">ATOM</span><span class="o">-</span><span class="n">Editor</span><span class="p">.</span><span class="n">deb</span>
 </pre></div>
 
+<div class="codehilite"><pre><span></span><span class="nt">config</span><span class="p">:</span>
+  <span class="nt">install</span><span class="p">:</span>
+    <span class="nt">debian_packages</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">https://atom-installer.github.com/v1.21.1/atom-amd64.deb,ATOM-Editor.deb</span>
+</pre></div>
+
 <ul>
 <li>First part is the URL to the deb file separated by ',' name of the file.</li>
 </ul>
@@ -1111,9 +1138,15 @@ purged from the system. Make sure that all the packages in the lists are availab
 <li>Configuration file is a <code class="codehilite"><span class="n">csv</span></code> file without headers. first column corresponds to URL ans the second field the file name under which the file is saved.</li>
 <li>Each DEB file to be installed should have following entry.</li>
 <li>URL to the deb file which can be accessed using wget<code class="codehilite"><span class="p">,</span></code>Name of the deb file without any spaces or special chars except hyphen.</li>
-<li>For example, to install kubernetes compose, the entry should look like below.</li>
+<li>For example, to install <code class="codehilite"><span class="n">kompose</span></code>, the entry should look like below.</li>
 </ul>
 <div class="codehilite"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">kubernetes</span><span class="o">/</span><span class="n">kompose</span><span class="o">/</span><span class="n">releases</span><span class="o">/</span><span class="n">download</span><span class="o">/</span><span class="n">v1</span><span class="p">.</span><span class="mi">19</span><span class="p">.</span><span class="mi">0</span><span class="o">/</span><span class="n">kompose</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">amd64</span><span class="p">,</span><span class="n">kompose</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="nt">config</span><span class="p">:</span>
+  <span class="nt">install</span><span class="p">:</span>
+    <span class="nt">binaries</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">https://github.com/kubernetes/kompose/releases/download/v1.19.0/kompose-linux-amd64,kompose</span>
 </pre></div>
 
 <ul>
@@ -1130,6 +1163,15 @@ This task requires <code class="codehilite"><span class="n">python</span><span c
 <li>The list files follow similar configuration as package list files. One item per line. however you can specify version requirements as you would for requirements file.</li>
 <li>Simulate flag will skip installing packages, unless <code class="codehilite"><span class="n">CI</span><span class="o">=</span><span class="k">true</span></code>.</li>
 </ul>
+<p>Example configuration is given below.</p>
+<div class="codehilite"><pre><span></span><span class="nt">config</span><span class="p">:</span>
+  <span class="nt">install</span><span class="p">:</span>
+    <span class="nt">python2</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docker-compose</span>
+    <span class="nt">python3</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">awscli</span>
+</pre></div>
+
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Don't mix Python 3 packages with Python 2 packages.</p>
@@ -1155,12 +1197,22 @@ This task requires <code class="codehilite"><span class="n">python</span><span c
 <p>This will <strong>NOT</strong> remove PPAs or repositories you have added manually or those added while installing DEB files.</p>
 </div>
 <h2 id="installing-snap-packages">Installing Snap packages<a class="headerlink" href="#installing-snap-packages" title="Permanent link">&para;</a></h2>
-<p>Script can install snap packages from snapstore. For example check the default config file.</p>
+<p>Script can install snap packages from snapstore. For example check the default config file.
+You should specify the classic snaps under <code class="codehilite"><span class="n">install</span><span class="p">.</span><span class="n">snaps</span><span class="p">.</span><span class="n">calssic</span></code>,
+edge snaps under <code class="codehilite"><span class="n">install</span><span class="p">.</span><span class="n">snaps</span><span class="p">.</span><span class="n">edge</span></code> and normal snaps under <code class="codehilite"><span class="n">install</span><span class="p">.</span><span class="n">snaps</span><span class="p">.</span><span class="n">normal</span></code> in the yaml file.</p>
+<div class="codehilite"><pre><span></span><span class="nt">config</span><span class="p">:</span>
+  <span class="nt">install</span><span class="p">:</span>
+    <span class="nt">snaps</span><span class="p">:</span>
+      <span class="nt">normal</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">htop</span>
+      <span class="nt">classic</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">vscode</span>
+</pre></div>
+
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>List mode does not support installing snap packages. Its responsibility of the user to separate classic
-snaps, edge and normal snaps. You should specify the classic snaps under <code class="codehilite"><span class="n">install</span><span class="p">.</span><span class="n">snaps</span><span class="p">.</span><span class="n">calssic</span></code>,
-edge snaps under <code class="codehilite"><span class="n">install</span><span class="p">.</span><span class="n">snaps</span><span class="p">.</span><span class="n">edge</span></code> and normal snaps under <code class="codehilite"><span class="n">install</span><span class="p">.</span><span class="n">snaps</span><span class="p">.</span><span class="n">normal</span></code> in the yaml file.</p>
+snaps, edge and normal snaps.</p>
 </div>
 <h2 id="all-in-one">All In one<a class="headerlink" href="#all-in-one" title="Permanent link">&para;</a></h2>
 <p>This will perform Following actions. (In the following order)</p>
@@ -1179,6 +1231,27 @@ edge snaps under <code class="codehilite"><span class="n">install</span><span cl
 support for selecting individiual tasks.</p>
 <h2 id="autopilot-mode">AUTOPILOT Mode<a class="headerlink" href="#autopilot-mode" title="Permanent link">&para;</a></h2>
 <p>Setting <code class="codehilite"><span class="n">AUTOPILOT</span><span class="o">=</span><span class="k">true</span></code> or passing <code class="codehilite"><span class="c1">--autopilot</span></code> will will skip all UI prompts and confirmations and run ALL In One.</p>
+<p>This mode requires you to specify tasks to be run if using YAML config. Example snippet is given below.</p>
+<div class="codehilite"><pre><span></span><span class="nt">config</span><span class="p">:</span>
+  <span class="c1"># Enabled Tasks</span>
+  <span class="nt">tasks</span><span class="p">:</span>
+    <span class="nt">update</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+    <span class="nt">upgrade</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+    <span class="c1"># Add Repos</span>
+    <span class="c1"># individual repos flags are mentioned under config.add_repo key</span>
+    <span class="nt">repo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+    <span class="c1"># Add PPAs</span>
+    <span class="nt">ppa</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+    <span class="c1"># APT Packages</span>
+    <span class="nt">apt</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+    <span class="c1"># Whether to purge packages mentioned in config.purge key</span>
+    <span class="nt">purge</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+    <span class="nt">debs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+    <span class="nt">pip2</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+    <span class="nt">pip3</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+    <span class="nt">binaries</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+
 <h2 id="delete-logs">Delete logs<a class="headerlink" href="#delete-logs" title="Permanent link">&para;</a></h2>
 <p>A log file is generated containing all the output generated by the apt and other commands and contain generic information and errors .</p>
 <ul>

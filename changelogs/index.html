@@ -1022,17 +1022,17 @@
 <h2 id="version-550">Version 5.5.0<a class="headerlink" href="#version-550" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Eoan Support</li>
-<li>Remove Kubernetes repo. (kubespray/kubeadm works better)
+<li>Remove Kubernetes repo support. (kubespray/kubeadm works better)
 Minikube is still supported via binary method.</li>
-<li>Option to fallback to non LTS releases</li>
+<li>Option to fallback to non LTS releases if using <code class="codehilite"><span class="c1">--fix</span></code></li>
 <li><code class="codehilite"><span class="c1">--pre-release</span></code> flag now supports Debian Bullseye</li>
 <li>Fix Gist URL not workin g(<a class="magiclink magiclink-github magiclink-issue" href="https://github.com/tprasadtp/ubuntu-post-install/issues/17" title="GitHub Issue: tprasadtp/ubuntu-post-install#17">#17</a>)</li>
 <li>Introduce <code class="codehilite"><span class="c1">--autopilot</span></code> flag</li>
-<li>Introduce DEBUG modes(activated if DEBUG=1)</li>
+<li>Introduce DEBUG modes(activated on DEBUG=1)</li>
 </ul>
 <h2 id="version-543">Version 5.4.3<a class="headerlink" href="#version-543" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Fix repo keys and fix classic snap installs</li>
+<li>Fix repository keys and fix classic snap installs</li>
 </ul>
 <h2 id="version-541">Version 5.4.1<a class="headerlink" href="#version-541" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1082,7 +1082,7 @@ Minikube is still supported via binary method.</li>
 </ul>
 <h2 id="version-520">Version 5.2.0<a class="headerlink" href="#version-520" title="Permanent link">&para;</a></h2>
 <ul>
-<li>New Feature: Static binaries installation (kompose,docker-compose etc)</li>
+<li>New Feature: Static binaries installation</li>
 <li>All script tmp files are now created /tmp/ae/</li>
 </ul>
 <h2 id="version-512">Version 5.1.2<a class="headerlink" href="#version-512" title="Permanent link">&para;</a></h2>
@@ -1171,12 +1171,8 @@ Minikube is still supported via binary method.</li>
 </ul>
 <h2 id="version-30">Version 3.0<a class="headerlink" href="#version-30" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p>Add Confirmation dialog using whiptail for Actions like Adding PPA, Repositories, Installing Apps, and Deb files</p>
-</li>
-<li>
-<p>Provide an option via command line to bypass the confirmation dialog for ci and automated environments or when its too annoying</p>
-</li>
+<li>Add Confirmation dialog using whiptail for Actions like Adding PPA, Repositories, Installing Apps, and Deb files</li>
+<li>Provide an option via command line to bypass the confirmation dialog for ci and automated environments or when its too annoying</li>
 <li>If the simulate option is selected then Only calculate the upgrade but do not perform upgrade.</li>
 <li>Added improved Simulate options. Helpful when just want to change somethings and test scripts without really downloading and installing packages</li>
 <li>Simulate option is by default false and can be toggled by passing <code class="codehilite"><span class="o">-</span><span class="n">s</span></code> or <code class="codehilite"><span class="c1">--simulate</span></code> while running the script via command line</li>
@@ -1187,7 +1183,7 @@ Minikube is still supported via binary method.</li>
 </ul>
 <h2 id="version-20">Version 2.0<a class="headerlink" href="#version-20" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Complete rewrite from scratch</li>
+<li>Complete rewrite</li>
 <li>Improvements in logging and console output</li>
 <li>Reduced verbosity in terminal output</li>
 <li>Flexible with packages and deb files</li>

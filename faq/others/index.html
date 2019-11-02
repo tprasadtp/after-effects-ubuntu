@@ -466,19 +466,6 @@
     Additional notes for sigma users
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#security" class="md-nav__link">
-    Security
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
       
@@ -716,19 +703,6 @@
     Additional notes for sigma users
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#security" class="md-nav__link">
-    Security
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
       
@@ -752,7 +726,7 @@
                 
                 <h1 id="others">Others<a class="headerlink" href="#others" title="Permanent link">&para;</a></h1>
 <h2 id="support-for-fedora-scientific-linux-open-suse-rhel-centos-put-your-favorite-distro">Support for Fedora/ Scientific Linux / Open SUSE / RHEL/ CentOS / put your favorite distro<a class="headerlink" href="#support-for-fedora-scientific-linux-open-suse-rhel-centos-put-your-favorite-distro" title="Permanent link">&para;</a></h2>
-<p>Its in the pipeline, but I cannot guarantee anything. Since I do not use anything other than Open SUSE very often, so it might take a while. But you can modify this script very easily to achieve that. You need to do the following things,</p>
+<p>Its in the pipeline, but I cannot guarantee anything. Since I do not use anything other than CentOS very often, so it might take a while. But you can modify this script very easily to achieve that. You need to do the following things,</p>
 <ul>
 <li>Replace apt-get commands with their equivalents (<code class="codehilite"><span class="n">dnf</span></code> or <code class="codehilite"><span class="n">zypper</span></code> or <code class="codehilite"><span class="n">yum</span></code> etc).</li>
 <li>Replace/Modify package names.</li>
@@ -763,9 +737,6 @@
 <h2 id="to-do">To-Do<a class="headerlink" href="#to-do" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Gsettings</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Replace stupid bash parser with parser written in Go.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Nod Modules &amp; Ruby Gem installations.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Option to upload log file to pastebin.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Send a notification (Slack? Hipchat? Hangouts Chat?) after tasks are complete. Helpful if you are using ssh.</li>
 </ul>
 <h2 id="additional-notes-for-sigma-users">Additional notes for sigma users<a class="headerlink" href="#additional-notes-for-sigma-users" title="Permanent link">&para;</a></h2>
@@ -774,16 +745,9 @@
 </blockquote>
 <ul>
 <li><strong>DO NOT</strong> use Github version of <code class="codehilite"><span class="k">get</span><span class="o">-</span><span class="k">after</span><span class="o">-</span><span class="n">effects</span><span class="p">.</span><span class="n">sh</span></code> to get the script. Please follow the instructions in SETUP.MD [ Only preset on sigma server]. Several packages &amp; some settings need to be manually configured to point to internal repositories &amp; mirrors. Bootstrap function will automatically setup things for you.</li>
-<li>Groups &amp; NFS mounts are also handled by bootstrap function.</li>
 <li>Currently Github branches do not report stats and <code class="codehilite"><span class="n">report_stats</span></code> is just a placeholder.</li>
 <li>If you are using the script from sigma server, stats are reported by default unless you disable them. UUID is <strong>NOT</strong> random for each run and is based on MAC address of one of your Ethernet devices.(If you have many) &amp; hostname.</li>
-<li>Scripts have same version number and are always in sync with Github. You can identify the difference by looking at REL_NAME. Release name has <code class="codehilite"><span class="o">-</span><span class="n">sigma</span></code> appended to it. To see release number &amp; name use <code class="codehilite"><span class="p">.</span><span class="o">/</span><span class="k">after</span><span class="o">-</span><span class="n">effects</span> <span class="o">-</span><span class="n">v</span></code>. You do not have to run this as <em>root</em>.</li>
-</ul>
-<h3 id="security">Security<a class="headerlink" href="#security" title="Permanent link">&para;</a></h3>
-<p>Well, this isn't very secure or meant to be.</p>
-<ul>
-<li>Verify the checksums on Github/Releases or Sigma Server.</li>
-<li>You can verify them manually or via <code class="codehilite"><span class="p">.</span><span class="o">/</span><span class="k">after</span><span class="o">-</span><span class="n">effects</span> <span class="c1">--verify</span></code>. Public Keys should be already in your keyring.</li>
+<li>Scripts have same version number and are always in sync with GitHub master branch. You can identify the difference by looking at REL_NAME. Release name has <code class="codehilite"><span class="o">-</span><span class="n">sigma</span></code> appended to it. To see release number &amp; name use <code class="codehilite"><span class="p">.</span><span class="o">/</span><span class="k">after</span><span class="o">-</span><span class="n">effects</span> <span class="o">-</span><span class="n">v</span></code>.</li>
 </ul>
                 
                   

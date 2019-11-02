@@ -817,7 +817,7 @@ You might see an error like this,</p>
 </pre></div>
 
 <ul>
-<li>It means that you do not have <em>lsb-release</em> package installed. It happens usually on docker containers. See <a href="/faq/dependencies/#what-do-i-need-to-run-this">What are its dependencies? What do I need on my system to run this?</a></li>
+<li>It might also that you do not have <em>lsb-release</em> package installed. It happens usually on docker containers. See <a href="/faq/dependencies/#what-do-i-need-to-run-this">What are its dependencies? What do I need on my system to run this?</a></li>
 <li>Install <code class="codehilite"><span class="n">lsb</span><span class="o">-</span><span class="n">release</span></code> package using <code class="codehilite"><span class="n">apt</span><span class="o">-</span><span class="k">get</span> <span class="o">-</span><span class="n">y</span> <span class="n">install</span> <span class="n">lsb</span><span class="o">-</span><span class="n">release</span></code></li>
 <li>In the case above you are probably missing other dependencies as well. It might be a good idea to install those dependencies first.</li>
 </ul>
@@ -844,6 +844,7 @@ This project uses Amazon Root CA &amp; LetsEncrypt for SSL, make sure that your 
 <ul>
 <li>If you know where it was stuck/errored, just re-run the task(s) which were not completed. If you don't know, go and check log file. Each task is labeled and is clearly logged before starting and after completing. Just run the tasks which did not complete. You don't have to re-download the packages you have already downloaded, because they are already cached by apt-get.</li>
 <li>Remember, some operations of the script can be very lengthy and can involve lots of downloads (If you used default list files, expect up to 2 GB of traffic). So, it might appear that script is stuck because cursor stops blinking. However it is not the case. If you are unsure please check the logs.</li>
+<li>You can also use debug mode which outputs debug logs and might help in resolving the issue.</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
