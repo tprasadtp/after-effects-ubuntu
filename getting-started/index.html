@@ -386,13 +386,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#with-git" class="md-nav__link">
-    With Git
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -729,13 +722,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#with-git" class="md-nav__link">
-    With Git
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -780,16 +766,19 @@
 <h2 id="step-1-get-the-script">Step 1: Get the script<a class="headerlink" href="#step-1-get-the-script" title="Permanent link">&para;</a></h2>
 <h4 id="without-git">Without Git<a class="headerlink" href="#without-git" title="Permanent link">&para;</a></h4>
 <p>Run this in Terminal</p>
-<div class="codehilite"><pre><span></span><span class="go">wget -Nnv https://ae.prasadt.com/get -O - | bash</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><span class="go"> wget -q https://ae.prasadt.com/get -O - | bash</span>
+<span class="go"> ```</span>
 
-<blockquote>
-<p>URL redirects to file with last known good commit on GitHub. It is cached &amp; proxies to GitHub at CDN level. If you are paranoid, use git.
-If you wish to use master branch pass <code class="codehilite"><span class="c1">--master</span></code> or <code class="codehilite"><span class="o">-</span><span class="n">m</span></code> as an argument. Eg: <code class="codehilite"><span class="n">wget</span> <span class="o">-</span><span class="n">Nnv</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">ae</span><span class="p">.</span><span class="n">prasadt</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="k">get</span> <span class="o">-</span><span class="n">O</span> <span class="o">-</span> <span class="o">|</span> <span class="n">bash</span> <span class="o">-</span><span class="n">s</span> <span class="c1">--master</span></code></p>
-</blockquote>
-<h4 id="with-git">With Git<a class="headerlink" href="#with-git" title="Permanent link">&para;</a></h4>
-<p>If you already have git on your system, you can use,</p>
-<div class="codehilite"><pre><span></span><span class="go">git clone https://github.com/tprasadtp/ubuntu-post-install.git &amp;&amp; cd ubuntu-post-install</span>
+<span class="gp">&gt;</span> URL redirects to file with last known good commit on GitHub. It is cached <span class="p">&amp;</span> proxies to GitHub at CDN level. If you are paranoid, use git.
+<span class="go">If you wish to use master branch pass `--master` or `-m` as an argument. Eg: `wget -q https://ae.prasadt.com/get -O - | bash -s --master`</span>
+
+
+<span class="gp">#</span><span class="c1">### With Git</span>
+
+<span class="go">If you already have git on your system, you can use,</span>
+
+<span class="go">```console</span>
+<span class="go">git clone https://github.com/tprasadtp/ubuntu-post-install.git &amp;&amp; cd ubuntu-post-install</span>
 </pre></div>
 
 <p>If you already have cloned the repo, you can use <code class="codehilite"><span class="n">git</span> <span class="n">pull</span></code> to get the latest changes.</p>
