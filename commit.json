@@ -1,12 +1,23 @@
 {
   "commit": {
     "id": "e92fe1d",
-    "msg": "chore(deps): bump pyyaml from 3.11 to 5.1 in /docs (#24)",
+    "msg": "chore(deps): bump pyyaml from 3.11 to 5.1 in /docs (#24)
+
+* chore(deps): bump pyyaml from 3.11 to 5.1 in /docs
+
+Bumps [pyyaml](https://github.com/yaml/pyyaml) from 3.11 to 5.1.
+- [Release notes](https://github.com/yaml/pyyaml/releases)
+- [Changelog](https://github.com/yaml/pyyaml/blob/master/CHANGES)
+- [Commits](https://github.com/yaml/pyyaml/compare/3.11...5.1)
+
+Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+
+* Update index.md",
     "branch": "master"
   },
   "build": {
-    "number": "611",
+    "number": "622",
     "tag": "none"
   },
-  "ts": "Wed Nov  6 15:37:12 UTC 2019"
+  "ts": "Sat Nov 23 17:51:23 UTC 2019"
 }
