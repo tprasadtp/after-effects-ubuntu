@@ -1,23 +1,12 @@
 {
   "commit": {
-    "id": "e92fe1d",
-    "msg": "chore(deps): bump pyyaml from 3.11 to 5.1 in /docs (#24)
-
-* chore(deps): bump pyyaml from 3.11 to 5.1 in /docs
-
-Bumps [pyyaml](https://github.com/yaml/pyyaml) from 3.11 to 5.1.
-- [Release notes](https://github.com/yaml/pyyaml/releases)
-- [Changelog](https://github.com/yaml/pyyaml/blob/master/CHANGES)
-- [Commits](https://github.com/yaml/pyyaml/compare/3.11...5.1)
-
-Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
-
-* Update index.md",
+    "id": "ea8a0bb",
+    "msg": "Support Elementary-OS 5.1-Hera (#32)",
     "branch": "master"
   },
   "build": {
-    "number": "622",
+    "number": "636",
     "tag": "none"
   },
-  "ts": "Sat Nov 23 17:51:23 UTC 2019"
+  "ts": "Mon Dec  9 13:15:29 UTC 2019"
 }

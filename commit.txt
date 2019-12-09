@@ -1,14 +1,3 @@
-SRC Commit ID  : e92fe1d
-SRC Message    : chore(deps): bump pyyaml from 3.11 to 5.1 in /docs (#24)
-
-* chore(deps): bump pyyaml from 3.11 to 5.1 in /docs
-
-Bumps [pyyaml](https://github.com/yaml/pyyaml) from 3.11 to 5.1.
-- [Release notes](https://github.com/yaml/pyyaml/releases)
-- [Changelog](https://github.com/yaml/pyyaml/blob/master/CHANGES)
-- [Commits](https://github.com/yaml/pyyaml/compare/3.11...5.1)
-
-Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
-
-* Update index.md
+SRC Commit ID  : ea8a0bb
+SRC Message    : Support Elementary-OS 5.1-Hera (#32)
 Built from     : master
