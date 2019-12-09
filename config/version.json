@@ -5,8 +5,8 @@
         "report": false
     },
     "version": {
-        "changelog": "19.10 Support, Enhancemets",
-        "name": "5.5.0-Beta",
-        "number": 550
+        "changelog": "19.10, ElementaryOS 5.1 Support",
+        "name": "5.5.1-Beta",
+        "number": 551
     }
 }

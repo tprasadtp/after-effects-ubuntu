@@ -1,12 +1,11 @@
 {
   "commit": {
-    "id": "ea8a0bb",
-    "msg": "Support Elementary-OS 5.1-Hera (#32)",
+    "id": "e94fc6f",
     "branch": "master"
   },
   "build": {
-    "number": "636",
+    "number": "643",
     "tag": "none"
   },
-  "ts": "Mon Dec  9 13:15:29 UTC 2019"
+  "ts": "Mon Dec  9 17:02:30 UTC 2019"
 }
