@@ -42,7 +42,7 @@
     
     
       
-        <title>What can it do? - Documentaion for After Effects</title>
+        <title>What can it do? - Documentation for After Effects</title>
       
     
     
@@ -125,7 +125,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://ae.prasadt.com/" title="Documentaion for After Effects" class="md-header-nav__button md-logo">
+        <a href="https://ae.prasadt.com/" title="Documentation for After Effects" class="md-header-nav__button md-logo">
           
             <i class="md-icon">book</i>
           
@@ -138,7 +138,7 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              Documentaion for After Effects
+              Documentation for After Effects
             </span>
             <span class="md-header-nav__topic">
               
@@ -290,12 +290,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://ae.prasadt.com/" title="Documentaion for After Effects" class="md-nav__button md-logo">
+    <a href="https://ae.prasadt.com/" title="Documentation for After Effects" class="md-nav__button md-logo">
       
         <i class="md-icon">book</i>
       
     </a>
-    Documentaion for After Effects
+    Documentation for After Effects
   </label>
   
     <div class="md-nav__source">
@@ -369,8 +369,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../faq/dependencies/" title="Dependecies" class="md-nav__link">
-      Dependecies
+    <a href="../faq/dependencies/" title="Dependencies" class="md-nav__link">
+      Dependencies
     </a>
   </li>
 
@@ -395,18 +395,6 @@
   <li class="md-nav__item">
     <a href="../faq/errors/" title="Errors & Issues" class="md-nav__link">
       Errors & Issues
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../faq/linuxmint/" title="Linux Mint" class="md-nav__link">
-      Linux Mint
     </a>
   </li>
 
@@ -977,7 +965,7 @@
 </tr>
 </tbody>
 </table>
-<details class="tip"><summary>Using <code class="codehilite"><span class="c1">--fix</span></code> falg</summary><p>Please note that the above repositories are sometimes not updated for latest Ubuntu release and most certainly will not be available for upcoming release of Ubuntu(Alpha/Beta). It might take some time till the repositories are available for the latest release. Use -f or --fix command line option or --pre-release in case you are using a Development version of ubuntu to revert using latest available version of repositories (usually previous Ubuntu release or in case of Beta/Alpha latest stable release of Ubuntu). <a href="/clioptions/#fix-for-latest-ubuntu-releases">For more info see command line options.</a></p>
+<details class="tip"><summary>Using <code class="codehilite"><span class="c1">--fix</span></code> falg</summary><p>Please note that the above repositories are sometimes not updated for latest Ubuntu release and most certainly will not be available for upcoming release of Ubuntu(Alpha/Beta). It might take some time till the repositories are available for the latest release. Use -f or --fix command line option or --pre-release in case you are using a development version of Ubuntu to revert using latest available version of repositories (usually previous Ubuntu release or in case of Beta/Alpha latest stable release of Ubuntu). <a href="/clioptions/#fix-for-latest-ubuntu-releases">For more info see command line options.</a></p>
 </details>
 <details class="tip"><summary>Controlling which repository is added using config file</summary><p>You can set your YML file to decide which repository is added. Some repositories may no be supported on your architecture or distribution. Take a look at <a href="/api/yaml">config.yml</a> for example. If you omit a value, it defaults to false <strong>ALWAYS</strong>. Do note that if you are using lists default values are different, they are mentioned in below.</p>
 </details>
@@ -1154,7 +1142,7 @@ purged from the system. Make sure that all the packages in the lists are availab
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note on file names in configuration</p>
-<p>Please note that file will be saved with the name mentioned in the file &amp; can be executed as such.</p>
+<p>Please note that file will be saved with the name mentioned in the file and will be in your path.</p>
 </div>
 <h2 id="install-python-packages-via-pip">Install python packages (via pip)<a class="headerlink" href="#install-python-packages-via-pip" title="Permanent link">&para;</a></h2>
 <p>This will install system wide python packages using pip. There are two lists. <code class="codehilite"><span class="n">pip</span><span class="p">.</span><span class="n">list</span></code> and <code class="codehilite"><span class="n">pip3</span><span class="p">.</span><span class="n">list</span></code> for python 2 and python 3 respectively. Alternatively you can specify in YAML config under <code class="codehilite"><span class="n">config</span><span class="p">.</span><span class="n">install</span><span class="p">.</span><span class="n">python2</span></code> or <code class="codehilite"><span class="n">config</span><span class="p">.</span><span class="n">install</span><span class="p">.</span><span class="n">python3</span></code>
@@ -1211,8 +1199,10 @@ edge snaps under <code class="codehilite"><span class="n">install</span><span cl
 
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>List mode does not support installing snap packages. Its responsibility of the user to separate classic
-snaps, edge and normal snaps.</p>
+<ul>
+<li>List mode does not support installing snap packages.</li>
+<li>Its responsibility of the user to separate classic snaps, edge and normal snaps.</li>
+</ul>
 </div>
 <h2 id="all-in-one">All In one<a class="headerlink" href="#all-in-one" title="Permanent link">&para;</a></h2>
 <p>This will perform Following actions. (In the following order)</p>
@@ -1228,9 +1218,9 @@ snaps, edge and normal snaps.</p>
 <li>Install Static binaries</li>
 </ul>
 <p>This option will honor --autopilot and --simulate options as individual tasks would do if used with YAML. Lists mode does not
-support for selecting individiual tasks.</p>
+support for selecting individual tasks.</p>
 <h2 id="autopilot-mode">AUTOPILOT Mode<a class="headerlink" href="#autopilot-mode" title="Permanent link">&para;</a></h2>
-<p>Setting <code class="codehilite"><span class="n">AUTOPILOT</span><span class="o">=</span><span class="k">true</span></code> or passing <code class="codehilite"><span class="c1">--autopilot</span></code> will will skip all UI prompts and confirmations and run ALL In One.</p>
+<p>Setting <code class="codehilite"><span class="n">AUTOPILOT</span><span class="o">=</span><span class="k">true</span></code> or passing <code class="codehilite"><span class="c1">--autopilot</span></code> will skip all UI prompts and confirmations and run ALL In One.</p>
 <p>This mode requires you to specify tasks to be run if using YAML config. Example snippet is given below.</p>
 <div class="codehilite"><pre><span></span><span class="nt">config</span><span class="p">:</span>
   <span class="c1"># Enabled Tasks</span>
@@ -1317,7 +1307,7 @@ support for selecting individiual tasks.</p>
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2018 Prasad Tengse
+            Copyright &copy; 2017-2020 Prasad Tengse
           </div>
         
         powered by

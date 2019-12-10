@@ -1,2 +1,2 @@
-93ed1e040704412883ca3f74cf5f8f94ff4fe631  after-effects
+855d4ee6ff48da58f69f2af0c20cc5ca35c12dc3  after-effects
 aad052ab163a3d34cf392f6ff47348649e070056  get-after-effects.sh
