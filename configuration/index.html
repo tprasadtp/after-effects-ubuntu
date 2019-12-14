@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -46,7 +46,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -57,12 +57,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -724,7 +724,7 @@
                 
                 <h1 id="overview-of-configuration-files">Overview of Configuration files<a class="headerlink" href="#overview-of-configuration-files" title="Permanent link">&para;</a></h1>
 <p>This Script is designed to be flexible. You have two options of configuring this script.
-<code class="codehilite"><span class="n">list</span></code> files directory <code class="codehilite"><span class="o">/</span><span class="k">data</span></code> &amp; YAML configurations are in <code class="codehilite"><span class="n">config</span></code>.</p>
+<code class="codehilite"><span class="err">list</span></code> files directory <code class="codehilite"><span class="err">/data</span></code> &amp; YAML configurations are in <code class="codehilite"><span class="err">config</span></code>.</p>
 <h2 id="configuration-using-lists">Configuration using  lists<a class="headerlink" href="#configuration-using-lists" title="Permanent link">&para;</a></h2>
 <p>These files contain list of apt packages which can be installed. Please see <a href="tasks/">Installing APT packages</a> for more information.</p>
 <table>
@@ -784,17 +784,17 @@
 <tr>
 <td align="left">purge</td>
 <td align="left">List of packages to be purged</td>
-<td align="left"><code class="codehilite"><span class="n">purge_not_required</span></code></td>
+<td align="left"><code class="codehilite"><span class="err">purge_not_required</span></code></td>
 </tr>
 <tr>
 <td align="left">ppa</td>
 <td align="left">List of ppas to be added</td>
-<td align="left"><code class="codehilite"><span class="n">add_ppas</span></code></td>
+<td align="left"><code class="codehilite"><span class="err">add_ppas</span></code></td>
 </tr>
 <tr>
 <td align="left">deb</td>
 <td align="left">List of DEB files to be installed (csv)</td>
-<td align="left"><code class="codehilite"><span class="n">install_debs</span></code></td>
+<td align="left"><code class="codehilite"><span class="err">install_debs</span></code></td>
 </tr>
 <tr>
 <td align="left">get.mlist</td>
@@ -810,25 +810,25 @@
 </table>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>After you customize, might want to use simulate flag. <code class="codehilite"><span class="n">sudo</span> <span class="p">.</span><span class="o">/</span><span class="k">after</span><span class="o">-</span><span class="n">effects</span> <span class="o">-</span><span class="n">s</span> <span class="o">-</span><span class="n">L</span></code></p>
+<p>After you customize, might want to use simulate flag. <code class="codehilite"><span class="err">sudo ./after-effects -s -L</span></code></p>
 </div>
 <h2 id="yaml-file">YAML File<a class="headerlink" href="#yaml-file" title="Permanent link">&para;</a></h2>
-<p>The script can fetch remote YAML data from given url. Use <code class="codehilite"><span class="c1">--remote-yaml</span></code> URL If you want to use a local config file, use <code class="codehilite"><span class="c1">--config-file FILENAME</span></code> It contains following details.</p>
+<p>The script can fetch remote YAML data from given url. Use <code class="codehilite"><span class="err">--remote-yaml</span></code> URL If you want to use a local config file, use <code class="codehilite"><span class="err">--config-file FILENAME</span></code> It contains following details.</p>
 <ul>
 <li>If you specify a an option via command line and provide config file which has conflicting option, Config file takes precedence.</li>
-<li>Remote configuration is displayed as <code class="codehilite"><span class="p">[</span>  <span class="n">R</span><span class="o">-</span><span class="n">Config</span>  <span class="p">]</span></code> in the logs and on the screen. To hide it use <code class="codehilite"><span class="c1">--hide-config</span></code></li>
+<li>Remote configuration is displayed as <code class="codehilite"><span class="err">[  R-Config  ]</span></code> in the logs and on the screen. To hide it use <code class="codehilite"><span class="err">--hide-config</span></code></li>
 <li>Check <a href="/yaml/#yaml-config">Sample YAML</a> configuration file <a href="/yaml/#yaml-config">here.</a></li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Using local file</p>
 <ul>
-<li>If you are testing, it might be a good idea to use a local file which holds this configuration data. In that  case use <code class="codehilite"><span class="o">-</span><span class="k">C</span> <span class="o">&lt;</span><span class="n">filename</span><span class="o">&gt;</span></code> option.</li>
-<li>After you customize, might want to use simulate flag. <code class="codehilite"><span class="n">sudo</span> <span class="p">.</span><span class="o">/</span><span class="k">after</span><span class="o">-</span><span class="n">effects</span> <span class="o">-</span><span class="n">s</span> <span class="o">-</span><span class="k">C</span> <span class="n">config</span><span class="p">.</span><span class="n">yml</span> <span class="o">-</span><span class="n">Y</span></code></li>
-<li>If both <code class="codehilite"><span class="o">-</span><span class="k">C</span></code> and <code class="codehilite"><span class="c1">--remote-yaml</span></code> are used, local config file takes priority, and remote file is <strong>completely</strong> ignored.</li>
+<li>If you are testing, it might be a good idea to use a local file which holds this configuration data. In that  case use <code class="codehilite"><span class="err">-C &lt;filename&gt;</span></code> option.</li>
+<li>After you customize, might want to use simulate flag. <code class="codehilite"><span class="err">sudo ./after-effects -s -C config.yml -Y</span></code></li>
+<li>If both <code class="codehilite"><span class="err">-C</span></code> and <code class="codehilite"><span class="err">--remote-yaml</span></code> are used, local config file takes priority, and remote file is <strong>completely</strong> ignored.</li>
 </ul>
 </div>
 <h2 id="autopilot-mode">Autopilot mode<a class="headerlink" href="#autopilot-mode" title="Permanent link">&para;</a></h2>
-<p>Setting <code class="codehilite"><span class="ss">&quot;AUTOPILOT=true&quot;</span></code> or <code class="codehilite"><span class="c1">--autopilot</span></code> will run all the tasks specified in the YAML file, or if <code class="codehilite"><span class="o">-</span><span class="n">L</span></code> list option is used, then all tasks are executed. the order in which tasks are run is as follows.</p>
+<p>Setting <code class="codehilite"><span class="err">&quot;AUTOPILOT=true&quot;</span></code> or <code class="codehilite"><span class="err">--autopilot</span></code> will run all the tasks specified in the YAML file, or if <code class="codehilite"><span class="err">-L</span></code> list option is used, then all tasks are executed. the order in which tasks are run is as follows.</p>
 <ul>
 <li>Update</li>
 <li>Upgrade</li>
@@ -842,11 +842,12 @@
 <li>Install Snap packages</li>
 </ul>
 <h2 id="reserved-environment-variables">Reserved Environment Variables<a class="headerlink" href="#reserved-environment-variables" title="Permanent link">&para;</a></h2>
-<p>Prefix <code class="codehilite"><span class="n">AE_</span></code> is reserved along with <code class="codehilite"><span class="n">TRAVIS_</span></code> as they are used for configuration and testing.
-Please do not set CI="true" in your environment variables. they will alter how script honors <code class="codehilite"><span class="c1">--simulate</span></code> flag and <code class="codehilite"><span class="c1">--autopilot</span></code> flag
+<p>Prefix <code class="codehilite"><span class="err">AE_</span></code> is reserved along with <code class="codehilite"><span class="err">TRAVIS_</span></code> as they are used for configuration and testing.
+Please do not set CI="true" in your environment variables. they will alter how script honors <code class="codehilite"><span class="err">--simulate</span></code> flag and <code class="codehilite"><span class="err">--autopilot</span></code> flag
 as they are reserved for testing on CI systems.</p>
                 
                   
+                
                 
               
               
@@ -927,7 +928,7 @@ as they are reserved for testing on CI systems.</p>
       
     </div>
     
-      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       

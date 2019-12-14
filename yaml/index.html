@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -46,7 +46,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -57,12 +57,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -637,166 +637,167 @@
                 
                 <h1 id="yaml-config">YAML Config<a class="headerlink" href="#yaml-config" title="Permanent link">&para;</a></h1>
 <p>The configuration file is pretty much self explanatory so, I am going to just post a sample config file below. All Boolean fields are optional and if not provided or if found to be invalid, fallback to false. Sample configs can be found in config directory.</p>
-<div class="codehilite"><pre><span></span># <span class="nv">Install</span> <span class="nv">Config</span>
-<span class="nv">version</span>: <span class="mi">5</span>
-<span class="nv">name</span>: <span class="nv">Polaris</span>
-<span class="nv">author</span>: <span class="nv">Prasad</span> <span class="nv">T</span>
-# <span class="nv">Configuration</span>
-<span class="nv">config</span>:
-  # <span class="nv">Enabled</span> <span class="nv">Tasks</span>
-  <span class="nv">tasks</span>:
-    <span class="nv">update</span>: <span class="nv">true</span>
-    <span class="nv">upgrade</span>: <span class="nv">true</span>
-    # <span class="nv">Add</span> <span class="nv">Repos</span>
-    # <span class="nv">individual</span> <span class="nv">repos</span> <span class="nv">flags</span> <span class="nv">are</span> <span class="nv">mentioned</span> <span class="nv">under</span> <span class="nv">config</span>.<span class="nv">add_repo</span> <span class="nv">key</span>
-    <span class="nv">repo</span>: <span class="nv">true</span>
-    # <span class="nv">Add</span> <span class="nv">PPAs</span>
-    <span class="nv">ppa</span>: <span class="nv">true</span>
-    # <span class="nv">APT</span> <span class="nv">Packages</span>
-    <span class="nv">apt</span>: <span class="nv">true</span>
-    # <span class="nv">Whether</span> <span class="nv">to</span> <span class="nv">purge</span> <span class="nv">packages</span> <span class="nv">mentioned</span> <span class="nv">in</span> <span class="nv">config</span>.<span class="nv">purge</span> <span class="nv">key</span>
-    <span class="nv">purge</span>: <span class="nv">true</span>
-    <span class="nv">debs</span>: <span class="nv">true</span>
-    <span class="nv">pip2</span>: <span class="nv">true</span>
-    <span class="nv">pip3</span>: <span class="nv">true</span>
-    <span class="nv">binaries</span>: <span class="nv">true</span>
-  # <span class="nv">Repository</span> <span class="nv">Flags</span>
-  <span class="nv">add_repo</span>:
-    <span class="nv">winehq</span>: <span class="nv">true</span>
-    <span class="nv">docker</span>: <span class="nv">true</span>
-    <span class="nv">mendeley</span>: <span class="nv">false</span>
-    <span class="nv">googlecloud</span>: <span class="nv">true</span>
-    <span class="nv">spotify</span>: <span class="nv">true</span>
-    <span class="nv">vscode</span>: <span class="nv">true</span>
-    <span class="nv">skype</span>: <span class="nv">true</span>
-    <span class="nv">signal</span>: <span class="nv">false</span>
-    <span class="nv">insync</span>: <span class="nv">true</span>
-    <span class="nv">google</span>: <span class="nv">true</span>
-  # <span class="nv">Flags</span>
-  <span class="nv">flags</span>:
-  # <span class="nv">Simulate</span> <span class="nv">flag</span> <span class="nv">will</span> <span class="nv">never</span> <span class="nv">be</span> <span class="nv">overridden</span> <span class="nv">by</span> <span class="nv">remote</span> <span class="nv">config</span>.
-    <span class="nv">purge_enabled</span>: <span class="nv">true</span>
-    <span class="nv">preserve_debs</span>: <span class="nv">true</span>
+<div class="codehilite"><pre><span></span><span class="o">#</span> <span class="n">Install</span> <span class="n">Config</span>
+<span class="k">version</span><span class="p">:</span> <span class="mi">5</span>
+<span class="n">name</span><span class="p">:</span> <span class="n">Polaris</span>
+<span class="n">author</span><span class="p">:</span> <span class="n">Prasad</span> <span class="n">T</span>
+<span class="o">#</span> <span class="n">Configuration</span>
+<span class="n">config</span><span class="p">:</span>
+  <span class="o">#</span> <span class="n">Enabled</span> <span class="n">Tasks</span>
+  <span class="n">tasks</span><span class="p">:</span>
+    <span class="k">update</span><span class="p">:</span> <span class="k">true</span>
+    <span class="n">upgrade</span><span class="p">:</span> <span class="k">true</span>
+    <span class="o">#</span> <span class="k">Add</span> <span class="n">Repos</span>
+    <span class="o">#</span> <span class="n">individual</span> <span class="n">repos</span> <span class="n">flags</span> <span class="k">are</span> <span class="n">mentioned</span> <span class="k">under</span> <span class="n">config</span><span class="p">.</span><span class="n">add_repo</span> <span class="k">key</span>
+    <span class="n">repo</span><span class="p">:</span> <span class="k">true</span>
+    <span class="o">#</span> <span class="k">Add</span> <span class="n">PPAs</span>
+    <span class="n">ppa</span><span class="p">:</span> <span class="k">true</span>
+    <span class="o">#</span> <span class="n">APT</span> <span class="n">Packages</span>
+    <span class="n">apt</span><span class="p">:</span> <span class="k">true</span>
+    <span class="o">#</span> <span class="n">Whether</span> <span class="k">to</span> <span class="n">purge</span> <span class="n">packages</span> <span class="n">mentioned</span> <span class="k">in</span> <span class="n">config</span><span class="p">.</span><span class="n">purge</span> <span class="k">key</span>
+    <span class="n">purge</span><span class="p">:</span> <span class="k">true</span>
+    <span class="n">debs</span><span class="p">:</span> <span class="k">true</span>
+    <span class="n">pip2</span><span class="p">:</span> <span class="k">true</span>
+    <span class="n">pip3</span><span class="p">:</span> <span class="k">true</span>
+    <span class="n">binaries</span><span class="p">:</span> <span class="k">true</span>
+  <span class="o">#</span> <span class="n">Repository</span> <span class="n">Flags</span>
+  <span class="n">add_repo</span><span class="p">:</span>
+    <span class="n">winehq</span><span class="p">:</span> <span class="k">true</span>
+    <span class="n">docker</span><span class="p">:</span> <span class="k">true</span>
+    <span class="n">mendeley</span><span class="p">:</span> <span class="k">false</span>
+    <span class="n">googlecloud</span><span class="p">:</span> <span class="k">true</span>
+    <span class="n">spotify</span><span class="p">:</span> <span class="k">true</span>
+    <span class="n">vscode</span><span class="p">:</span> <span class="k">true</span>
+    <span class="n">skype</span><span class="p">:</span> <span class="k">true</span>
+    <span class="n">signal</span><span class="p">:</span> <span class="k">false</span>
+    <span class="n">insync</span><span class="p">:</span> <span class="k">true</span>
+    <span class="n">google</span><span class="p">:</span> <span class="k">true</span>
+  <span class="o">#</span> <span class="n">Flags</span>
+  <span class="n">flags</span><span class="p">:</span>
+  <span class="o">#</span> <span class="n">Simulate</span> <span class="n">flag</span> <span class="n">will</span> <span class="n">never</span> <span class="n">be</span> <span class="n">overridden</span> <span class="k">by</span> <span class="n">remote</span> <span class="n">config</span><span class="p">.</span>
+    <span class="n">purge_enabled</span><span class="p">:</span> <span class="k">true</span>
+    <span class="n">preserve_debs</span><span class="p">:</span> <span class="k">true</span>
 
 
-  # <span class="nv">Packages</span> <span class="nv">to</span> <span class="nv">purge</span>
-  <span class="nv">purge</span>:
-    <span class="o">-</span> <span class="nv">gnome</span><span class="o">-</span><span class="nv">mines</span>
-    <span class="o">-</span> <span class="nv">gnome</span><span class="o">-</span><span class="nv">sudoku</span>
-    <span class="o">-</span> <span class="nv">aisleriot</span>
-    <span class="o">-</span> <span class="nv">gnome</span><span class="o">-</span><span class="nv">mahjongg</span>
-  # <span class="nv">PPA</span> <span class="nv">List</span>
-  <span class="nv">ppa</span>:
-    <span class="o">-</span> <span class="nv">ppa</span>:<span class="nv">dawidd0811</span><span class="o">/</span><span class="nv">neofetch</span>
-    <span class="o">-</span> <span class="nv">ppa</span>:<span class="nv">yubico</span><span class="o">/</span><span class="nv">stable</span>
-    <span class="o">-</span> <span class="nv">ppa</span>:<span class="nv">teejee2008</span><span class="o">/</span><span class="nv">ppa</span>
-  # <span class="nv">Install</span> <span class="nv">components</span>
-  # <span class="nv">APT</span> <span class="nv">Packages</span>, <span class="nv">Python</span> <span class="nv">Modules</span>, <span class="nv">Debian</span> <span class="nv">packages</span>
-  <span class="nv">install</span>:
-    # <span class="nv">Python</span> <span class="mi">2</span> <span class="nv">Modules</span>
-    <span class="nv">python2</span>:
-      <span class="o">-</span> <span class="nv">docker</span><span class="o">-</span><span class="nv">compose</span>
-    # <span class="nv">Python</span> <span class="mi">3</span> <span class="nv">Modules</span>
-    <span class="nv">python3</span>:
-      <span class="o">-</span> <span class="nv">awscli</span>
-    # <span class="nv">Debian</span> <span class="nv">packages</span>:  .<span class="nv">deb</span> <span class="nv">files</span>
-    # <span class="nv">CSV</span> <span class="nv">format</span> <span class="nv">similar</span> <span class="nv">to</span> <span class="nv">lists</span>
-    <span class="nv">debian_packages</span>:
-      <span class="o">-</span> <span class="nv">https</span>:<span class="o">//</span><span class="nv">atom</span><span class="o">-</span><span class="nv">installer</span>.<span class="nv">github</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">v1</span>.<span class="mi">28</span>.<span class="mi">0</span><span class="o">/</span><span class="nv">atom</span><span class="o">-</span><span class="nv">amd64</span>.<span class="nv">deb</span>,<span class="nv">Atom</span><span class="o">-</span><span class="nv">Editor</span>.<span class="nv">deb</span>
-      <span class="o">-</span> <span class="nv">https</span>:<span class="o">//</span><span class="nv">download</span>.<span class="nv">teamviewer</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">download</span><span class="o">/</span><span class="nv">teamviewer_i386</span>.<span class="nv">deb</span>,<span class="nv">Teamviewer</span>.<span class="nv">deb</span>
-    # <span class="nv">Static</span> <span class="nv">Binaries</span> <span class="nv">which</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">placed</span> <span class="nv">in</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">bin</span>
-    # <span class="nv">minikube</span>, <span class="nv">docker</span><span class="o">-</span><span class="nv">compose</span>, <span class="nv">etc</span>.
-    # <span class="nv">Follows</span> <span class="nv">same</span> <span class="nv">pattern</span> <span class="nv">as</span> <span class="nv">Debian</span> <span class="nv">packages</span>
-    # <span class="nv">Name</span> <span class="nv">to</span> <span class="nv">be</span> <span class="nv">saved</span> <span class="nv">is</span> <span class="nv">second</span> <span class="nv">field</span>
-    <span class="nv">binaries</span>:
-      <span class="o">-</span> <span class="nv">https</span>:<span class="o">//</span><span class="nv">github</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">docker</span><span class="o">/</span><span class="nv">compose</span><span class="o">/</span><span class="nv">releases</span><span class="o">/</span><span class="nv">download</span><span class="o">/</span><span class="mi">1</span>.<span class="mi">20</span>.<span class="mi">0</span><span class="o">/</span><span class="nv">docker</span><span class="o">-</span><span class="nv">compose</span><span class="o">-</span><span class="nv">linux</span><span class="o">-</span><span class="nv">x86_64</span>,<span class="nv">docker</span><span class="o">-</span><span class="nv">compose</span>
-      <span class="o">-</span> <span class="nv">https</span>:<span class="o">//</span><span class="nv">github</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">kubernetes</span><span class="o">/</span><span class="nv">minikube</span><span class="o">/</span><span class="nv">releases</span><span class="o">/</span><span class="nv">download</span><span class="o">/</span><span class="nv">v0</span>.<span class="mi">28</span>.<span class="mi">2</span><span class="o">/</span><span class="nv">minikube</span><span class="o">-</span><span class="nv">linux</span><span class="o">-</span><span class="nv">amd64</span>,<span class="nv">minikube</span>
-      <span class="o">-</span> <span class="nv">https</span>:<span class="o">//</span><span class="nv">github</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">kubernetes</span><span class="o">/</span><span class="nv">kompose</span><span class="o">/</span><span class="nv">releases</span><span class="o">/</span><span class="nv">download</span><span class="o">/</span><span class="nv">v1</span>.<span class="mi">19</span>.<span class="mi">0</span><span class="o">/</span><span class="nv">kompose</span><span class="o">-</span><span class="nv">linux</span><span class="o">-</span><span class="nv">amd64</span>,<span class="nv">kompose</span>
-    <span class="nv">apt</span>:
-      # <span class="nv">Admin</span> <span class="nv">related</span> <span class="nv">Stuff</span>
-      <span class="nv">administration</span>:
-        <span class="o">-</span> <span class="nv">dconf</span><span class="o">-</span><span class="nv">editor</span>
-        <span class="o">-</span> <span class="nv">htop</span>
-        <span class="o">-</span> <span class="nv">apt</span><span class="o">-</span><span class="nv">xapian</span><span class="o">-</span><span class="nv">index</span>
-        <span class="o">-</span> <span class="nv">gdebi</span>
-        <span class="o">-</span> <span class="nv">gparted</span>
-        <span class="o">-</span> <span class="nv">synaptic</span>
-        <span class="o">-</span> <span class="nv">bleachbit</span>
-      # <span class="nv">Security</span> <span class="nv">Related</span> <span class="nv">Stuff</span>
-      <span class="nv">security</span>:
-        <span class="o">-</span> <span class="nv">gufw</span>
-      # <span class="nv">Productivity</span> <span class="o">&amp;</span> <span class="nv">Office</span> <span class="nv">Tools</span>.
-      <span class="nv">productivity</span>:
-        <span class="o">-</span> <span class="nv">empathy</span>
-        <span class="o">-</span> <span class="nv">evolution</span>
-        <span class="o">-</span> <span class="nv">realmd</span>
-        <span class="o">-</span> <span class="nv">pandoc</span><span class="o">-</span><span class="nv">data</span>
-        <span class="o">-</span> <span class="nv">pandoc</span>
-        <span class="o">-</span> <span class="nv">texstudio</span>
-        <span class="o">-</span> <span class="nv">texlive</span><span class="o">-</span><span class="nv">fonts</span><span class="o">-</span><span class="nv">extra</span>
-        <span class="o">-</span> <span class="nv">texlive</span><span class="o">-</span><span class="nv">formats</span><span class="o">-</span><span class="nv">extra</span>
-        <span class="o">-</span> <span class="nv">texlive</span><span class="o">-</span><span class="nv">fonts</span><span class="o">-</span><span class="nv">recommended</span>
-        <span class="o">-</span> <span class="nv">texlive</span><span class="o">-</span><span class="nv">science</span>
-        <span class="o">-</span> <span class="nv">texlive</span><span class="o">-</span><span class="nv">generic</span><span class="o">-</span><span class="nv">extra</span>
-        <span class="o">-</span> <span class="nv">texlive</span><span class="o">-</span><span class="nv">xetex</span>
-        <span class="o">-</span> <span class="nv">texlive</span><span class="o">-</span><span class="nv">luatex</span>
-        <span class="o">-</span> <span class="nv">texlive</span><span class="o">-</span><span class="nv">pstricks</span>
-        <span class="o">-</span> <span class="nv">texlive</span><span class="o">-</span><span class="nv">science</span>
-        <span class="o">-</span> <span class="nv">texlive</span><span class="o">-</span><span class="nv">extra</span><span class="o">-</span><span class="nv">utils</span>
-        <span class="o">-</span> <span class="nv">texlive</span><span class="o">-</span><span class="nv">lang</span><span class="o">-</span><span class="nv">english</span>
-        <span class="o">-</span> <span class="nv">texlive</span><span class="o">-</span><span class="nv">lang</span><span class="o">-</span><span class="nv">other</span>
-        <span class="o">-</span> <span class="nv">texlive</span><span class="o">-</span><span class="nv">font</span><span class="o">-</span><span class="nv">utils</span>
-        <span class="o">-</span> <span class="nv">texlive</span><span class="o">-</span><span class="nv">publishers</span>
-        <span class="o">-</span> <span class="nv">gummi</span>
-      # <span class="nv">Multimedia</span> <span class="nv">Tools</span>. <span class="nv">Photo</span> <span class="nv">Editors</span> <span class="nv">Converting</span> <span class="nv">tools</span>, <span class="nv">plex</span> <span class="nv">etc</span>.
-      <span class="nv">multimedia</span>:
-        <span class="o">-</span> <span class="nv">audacity</span>
-        <span class="o">-</span> <span class="nv">vlc</span>
-        <span class="o">-</span> <span class="nv">gimp</span>
-        <span class="o">-</span> <span class="nv">handbrake</span>
-        <span class="o">-</span> <span class="nv">handbrake</span><span class="o">-</span><span class="nv">cli</span>
-        <span class="o">-</span> <span class="nv">rawtherapee</span>
-        <span class="o">-</span> <span class="nv">darktable</span>
-        <span class="o">-</span> <span class="nv">mpv</span>
-        <span class="o">-</span> <span class="nv">pavucontrol</span>
-        <span class="o">-</span> <span class="nv">cheese</span>
-      # <span class="nv">Tools</span> <span class="nv">related</span> <span class="nv">to</span> <span class="nv">development</span>.
-      <span class="nv">development</span>:
-        <span class="o">-</span> <span class="nv">curl</span>
-        <span class="o">-</span> <span class="nv">spyder</span>
-        <span class="o">-</span> <span class="nv">spyder3</span>
-        <span class="o">-</span> <span class="nv">git</span>
-        <span class="o">-</span> <span class="nv">shellcheck</span>
-        <span class="o">-</span> <span class="nv">ocl</span><span class="o">-</span><span class="nv">icd</span><span class="o">-</span><span class="nv">dev</span>
-        <span class="o">-</span> <span class="nv">opencl</span><span class="o">-</span><span class="nv">headers</span>
-        <span class="o">-</span> <span class="nv">clinfo</span>
-        <span class="o">-</span> <span class="nv">vainfo</span>
-        <span class="o">-</span> <span class="nv">vdpauinfo</span>
-        <span class="o">-</span> <span class="nv">ocl</span><span class="o">-</span><span class="nv">icd</span><span class="o">-</span><span class="nv">libopencl1</span>
-        <span class="o">-</span> <span class="nv">ruby</span>
-        <span class="o">-</span> <span class="nv">ruby</span><span class="o">-</span><span class="nv">dev</span>
-        <span class="o">-</span> <span class="nv">python</span><span class="o">-</span><span class="nv">magic</span>
-        <span class="o">-</span> <span class="nv">putty</span>
-        <span class="o">-</span> <span class="nv">python3</span><span class="o">-</span><span class="nv">pip</span>
-        <span class="o">-</span> <span class="nv">python</span><span class="o">-</span><span class="nv">dateutil</span>
-        <span class="o">-</span> <span class="nv">python</span><span class="o">-</span><span class="nv">pip</span><span class="o">-</span><span class="nv">whl</span>
-        <span class="o">-</span> <span class="nv">python</span><span class="o">-</span><span class="nv">pip</span>
-      # <span class="nv">Everything</span> <span class="k">Else</span>
-      # <span class="nv">Which</span> <span class="nv">is</span> <span class="nv">conditional</span>
-      <span class="nv">other</span>:
-        <span class="o">-</span> <span class="nv">gnome</span><span class="o">-</span><span class="nv">online</span><span class="o">-</span><span class="nv">miners</span>
-      # <span class="nv">Packages</span> <span class="nv">supplied</span> <span class="nv">by</span> <span class="nv">external</span> <span class="nv">repositories</span> <span class="o">&amp;</span> <span class="nv">PPAs</span>
-      # <span class="nv">Dont</span> <span class="nv">Mix</span> <span class="nv">packages</span> <span class="nv">provided</span> <span class="nv">by</span> <span class="nv">distribution</span> <span class="nv">and</span> <span class="nv">PPAs</span>
-      # <span class="nv">Sometimes</span> <span class="nv">external</span> <span class="nv">repos</span> <span class="nv">and</span> <span class="nv">ppas</span> <span class="nv">fail</span>, <span class="nv">so</span> <span class="nv">better</span> <span class="nv">isolate</span> <span class="nv">it</span>.
-      <span class="nv">external</span>:
-        <span class="o">-</span> <span class="nv">google</span><span class="o">-</span><span class="nv">chrome</span><span class="o">-</span><span class="nv">stable</span>
-        <span class="o">-</span> <span class="nv">spotify</span><span class="o">-</span><span class="nv">client</span>
-        <span class="o">-</span> <span class="nv">code</span>
-        <span class="o">-</span> <span class="nv">google</span><span class="o">-</span><span class="nv">cloud</span><span class="o">-</span><span class="nv">sdk</span>
-        <span class="o">-</span> <span class="nv">docker</span><span class="o">-</span><span class="nv">ce</span>
+  <span class="o">#</span> <span class="n">Packages</span> <span class="k">to</span> <span class="n">purge</span>
+  <span class="n">purge</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">gnome</span><span class="o">-</span><span class="n">mines</span>
+    <span class="o">-</span> <span class="n">gnome</span><span class="o">-</span><span class="n">sudoku</span>
+    <span class="o">-</span> <span class="n">aisleriot</span>
+    <span class="o">-</span> <span class="n">gnome</span><span class="o">-</span><span class="n">mahjongg</span>
+  <span class="o">#</span> <span class="n">PPA</span> <span class="n">List</span>
+  <span class="n">ppa</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">ppa</span><span class="p">:</span><span class="n">dawidd0811</span><span class="o">/</span><span class="n">neofetch</span>
+    <span class="o">-</span> <span class="n">ppa</span><span class="p">:</span><span class="n">yubico</span><span class="o">/</span><span class="k">stable</span>
+    <span class="o">-</span> <span class="n">ppa</span><span class="p">:</span><span class="n">teejee2008</span><span class="o">/</span><span class="n">ppa</span>
+  <span class="o">#</span> <span class="n">Install</span> <span class="n">components</span>
+  <span class="o">#</span> <span class="n">APT</span> <span class="n">Packages</span><span class="p">,</span> <span class="n">Python</span> <span class="n">Modules</span><span class="p">,</span> <span class="n">Debian</span> <span class="n">packages</span>
+  <span class="n">install</span><span class="p">:</span>
+    <span class="o">#</span> <span class="n">Python</span> <span class="mi">2</span> <span class="n">Modules</span>
+    <span class="n">python2</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">docker</span><span class="o">-</span><span class="n">compose</span>
+    <span class="o">#</span> <span class="n">Python</span> <span class="mi">3</span> <span class="n">Modules</span>
+    <span class="n">python3</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">awscli</span>
+    <span class="o">#</span> <span class="n">Debian</span> <span class="n">packages</span><span class="p">:</span>  <span class="p">.</span><span class="n">deb</span> <span class="n">files</span>
+    <span class="o">#</span> <span class="n">CSV</span> <span class="n">format</span> <span class="k">similar</span> <span class="k">to</span> <span class="n">lists</span>
+    <span class="n">debian_packages</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">atom</span><span class="o">-</span><span class="n">installer</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">v1</span><span class="p">.</span><span class="mi">28</span><span class="p">.</span><span class="mi">0</span><span class="o">/</span><span class="n">atom</span><span class="o">-</span><span class="n">amd64</span><span class="p">.</span><span class="n">deb</span><span class="p">,</span><span class="n">Atom</span><span class="o">-</span><span class="n">Editor</span><span class="p">.</span><span class="n">deb</span>
+      <span class="o">-</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="p">.</span><span class="n">teamviewer</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">download</span><span class="o">/</span><span class="n">teamviewer_i386</span><span class="p">.</span><span class="n">deb</span><span class="p">,</span><span class="n">Teamviewer</span><span class="p">.</span><span class="n">deb</span>
+    <span class="o">#</span> <span class="k">Static</span> <span class="n">Binaries</span> <span class="n">which</span> <span class="n">will</span> <span class="n">be</span> <span class="n">placed</span> <span class="k">in</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">bin</span>
+    <span class="o">#</span> <span class="n">minikube</span><span class="p">,</span> <span class="n">docker</span><span class="o">-</span><span class="n">compose</span><span class="p">,</span> <span class="n">etc</span><span class="p">.</span>
+    <span class="o">#</span> <span class="n">Follows</span> <span class="n">same</span> <span class="n">pattern</span> <span class="k">as</span> <span class="n">Debian</span> <span class="n">packages</span>
+    <span class="o">#</span> <span class="n">Name</span> <span class="k">to</span> <span class="n">be</span> <span class="n">saved</span> <span class="k">is</span> <span class="k">second</span> <span class="n">field</span>
+    <span class="n">binaries</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">docker</span><span class="o">/</span><span class="n">compose</span><span class="o">/</span><span class="n">releases</span><span class="o">/</span><span class="n">download</span><span class="o">/</span><span class="mi">1</span><span class="p">.</span><span class="mi">20</span><span class="p">.</span><span class="mi">0</span><span class="o">/</span><span class="n">docker</span><span class="o">-</span><span class="n">compose</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">x86_64</span><span class="p">,</span><span class="n">docker</span><span class="o">-</span><span class="n">compose</span>
+      <span class="o">-</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">kubernetes</span><span class="o">/</span><span class="n">minikube</span><span class="o">/</span><span class="n">releases</span><span class="o">/</span><span class="n">download</span><span class="o">/</span><span class="n">v0</span><span class="p">.</span><span class="mi">28</span><span class="p">.</span><span class="mi">2</span><span class="o">/</span><span class="n">minikube</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">amd64</span><span class="p">,</span><span class="n">minikube</span>
+      <span class="o">-</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">kubernetes</span><span class="o">/</span><span class="n">kompose</span><span class="o">/</span><span class="n">releases</span><span class="o">/</span><span class="n">download</span><span class="o">/</span><span class="n">v1</span><span class="p">.</span><span class="mi">19</span><span class="p">.</span><span class="mi">0</span><span class="o">/</span><span class="n">kompose</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">amd64</span><span class="p">,</span><span class="n">kompose</span>
+    <span class="n">apt</span><span class="p">:</span>
+      <span class="o">#</span> <span class="k">Admin</span> <span class="n">related</span> <span class="n">Stuff</span>
+      <span class="n">administration</span><span class="p">:</span>
+        <span class="o">-</span> <span class="n">dconf</span><span class="o">-</span><span class="n">editor</span>
+        <span class="o">-</span> <span class="n">htop</span>
+        <span class="o">-</span> <span class="n">apt</span><span class="o">-</span><span class="n">xapian</span><span class="o">-</span><span class="k">index</span>
+        <span class="o">-</span> <span class="n">gdebi</span>
+        <span class="o">-</span> <span class="n">gparted</span>
+        <span class="o">-</span> <span class="n">synaptic</span>
+        <span class="o">-</span> <span class="n">bleachbit</span>
+      <span class="o">#</span> <span class="k">Security</span> <span class="n">Related</span> <span class="n">Stuff</span>
+      <span class="k">security</span><span class="p">:</span>
+        <span class="o">-</span> <span class="n">gufw</span>
+      <span class="o">#</span> <span class="n">Productivity</span> <span class="o">&amp;</span> <span class="n">Office</span> <span class="n">Tools</span><span class="p">.</span>
+      <span class="n">productivity</span><span class="p">:</span>
+        <span class="o">-</span> <span class="n">empathy</span>
+        <span class="o">-</span> <span class="n">evolution</span>
+        <span class="o">-</span> <span class="n">realmd</span>
+        <span class="o">-</span> <span class="n">pandoc</span><span class="o">-</span><span class="k">data</span>
+        <span class="o">-</span> <span class="n">pandoc</span>
+        <span class="o">-</span> <span class="n">texstudio</span>
+        <span class="o">-</span> <span class="n">texlive</span><span class="o">-</span><span class="n">fonts</span><span class="o">-</span><span class="n">extra</span>
+        <span class="o">-</span> <span class="n">texlive</span><span class="o">-</span><span class="n">formats</span><span class="o">-</span><span class="n">extra</span>
+        <span class="o">-</span> <span class="n">texlive</span><span class="o">-</span><span class="n">fonts</span><span class="o">-</span><span class="n">recommended</span>
+        <span class="o">-</span> <span class="n">texlive</span><span class="o">-</span><span class="n">science</span>
+        <span class="o">-</span> <span class="n">texlive</span><span class="o">-</span><span class="n">generic</span><span class="o">-</span><span class="n">extra</span>
+        <span class="o">-</span> <span class="n">texlive</span><span class="o">-</span><span class="n">xetex</span>
+        <span class="o">-</span> <span class="n">texlive</span><span class="o">-</span><span class="n">luatex</span>
+        <span class="o">-</span> <span class="n">texlive</span><span class="o">-</span><span class="n">pstricks</span>
+        <span class="o">-</span> <span class="n">texlive</span><span class="o">-</span><span class="n">science</span>
+        <span class="o">-</span> <span class="n">texlive</span><span class="o">-</span><span class="n">extra</span><span class="o">-</span><span class="n">utils</span>
+        <span class="o">-</span> <span class="n">texlive</span><span class="o">-</span><span class="n">lang</span><span class="o">-</span><span class="n">english</span>
+        <span class="o">-</span> <span class="n">texlive</span><span class="o">-</span><span class="n">lang</span><span class="o">-</span><span class="n">other</span>
+        <span class="o">-</span> <span class="n">texlive</span><span class="o">-</span><span class="n">font</span><span class="o">-</span><span class="n">utils</span>
+        <span class="o">-</span> <span class="n">texlive</span><span class="o">-</span><span class="n">publishers</span>
+        <span class="o">-</span> <span class="n">gummi</span>
+      <span class="o">#</span> <span class="n">Multimedia</span> <span class="n">Tools</span><span class="p">.</span> <span class="n">Photo</span> <span class="n">Editors</span> <span class="n">Converting</span> <span class="n">tools</span><span class="p">,</span> <span class="n">plex</span> <span class="n">etc</span><span class="p">.</span>
+      <span class="n">multimedia</span><span class="p">:</span>
+        <span class="o">-</span> <span class="n">audacity</span>
+        <span class="o">-</span> <span class="n">vlc</span>
+        <span class="o">-</span> <span class="n">gimp</span>
+        <span class="o">-</span> <span class="n">handbrake</span>
+        <span class="o">-</span> <span class="n">handbrake</span><span class="o">-</span><span class="n">cli</span>
+        <span class="o">-</span> <span class="n">rawtherapee</span>
+        <span class="o">-</span> <span class="n">darktable</span>
+        <span class="o">-</span> <span class="n">mpv</span>
+        <span class="o">-</span> <span class="n">pavucontrol</span>
+        <span class="o">-</span> <span class="n">cheese</span>
+      <span class="o">#</span> <span class="n">Tools</span> <span class="n">related</span> <span class="k">to</span> <span class="n">development</span><span class="p">.</span>
+      <span class="n">development</span><span class="p">:</span>
+        <span class="o">-</span> <span class="n">curl</span>
+        <span class="o">-</span> <span class="n">spyder</span>
+        <span class="o">-</span> <span class="n">spyder3</span>
+        <span class="o">-</span> <span class="n">git</span>
+        <span class="o">-</span> <span class="n">shellcheck</span>
+        <span class="o">-</span> <span class="n">ocl</span><span class="o">-</span><span class="n">icd</span><span class="o">-</span><span class="n">dev</span>
+        <span class="o">-</span> <span class="n">opencl</span><span class="o">-</span><span class="n">headers</span>
+        <span class="o">-</span> <span class="n">clinfo</span>
+        <span class="o">-</span> <span class="n">vainfo</span>
+        <span class="o">-</span> <span class="n">vdpauinfo</span>
+        <span class="o">-</span> <span class="n">ocl</span><span class="o">-</span><span class="n">icd</span><span class="o">-</span><span class="n">libopencl1</span>
+        <span class="o">-</span> <span class="n">ruby</span>
+        <span class="o">-</span> <span class="n">ruby</span><span class="o">-</span><span class="n">dev</span>
+        <span class="o">-</span> <span class="n">python</span><span class="o">-</span><span class="n">magic</span>
+        <span class="o">-</span> <span class="n">putty</span>
+        <span class="o">-</span> <span class="n">python3</span><span class="o">-</span><span class="n">pip</span>
+        <span class="o">-</span> <span class="n">python</span><span class="o">-</span><span class="n">dateutil</span>
+        <span class="o">-</span> <span class="n">python</span><span class="o">-</span><span class="n">pip</span><span class="o">-</span><span class="n">whl</span>
+        <span class="o">-</span> <span class="n">python</span><span class="o">-</span><span class="n">pip</span>
+      <span class="o">#</span> <span class="n">Everything</span> <span class="k">Else</span>
+      <span class="o">#</span> <span class="n">Which</span> <span class="k">is</span> <span class="n">conditional</span>
+      <span class="n">other</span><span class="p">:</span>
+        <span class="o">-</span> <span class="n">gnome</span><span class="o">-</span><span class="n">online</span><span class="o">-</span><span class="n">miners</span>
+      <span class="o">#</span> <span class="n">Packages</span> <span class="n">supplied</span> <span class="k">by</span> <span class="k">external</span> <span class="n">repositories</span> <span class="o">&amp;</span> <span class="n">PPAs</span>
+      <span class="o">#</span> <span class="n">Dont</span> <span class="n">Mix</span> <span class="n">packages</span> <span class="n">provided</span> <span class="k">by</span> <span class="n">distribution</span> <span class="k">and</span> <span class="n">PPAs</span>
+      <span class="o">#</span> <span class="n">Sometimes</span> <span class="k">external</span> <span class="n">repos</span> <span class="k">and</span> <span class="n">ppas</span> <span class="n">fail</span><span class="p">,</span> <span class="n">so</span> <span class="n">better</span> <span class="n">isolate</span> <span class="n">it</span><span class="p">.</span>
+      <span class="k">external</span><span class="p">:</span>
+        <span class="o">-</span> <span class="n">google</span><span class="o">-</span><span class="n">chrome</span><span class="o">-</span><span class="k">stable</span>
+        <span class="o">-</span> <span class="n">spotify</span><span class="o">-</span><span class="n">client</span>
+        <span class="o">-</span> <span class="n">code</span>
+        <span class="o">-</span> <span class="n">google</span><span class="o">-</span><span class="n">cloud</span><span class="o">-</span><span class="n">sdk</span>
+        <span class="o">-</span> <span class="n">docker</span><span class="o">-</span><span class="n">ce</span>
 </pre></div>
                 
                   
+                
                 
               
               
@@ -877,7 +878,7 @@
       
     </div>
     
-      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       

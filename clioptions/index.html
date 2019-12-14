@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -46,7 +46,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -57,12 +57,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -922,7 +922,7 @@
 <h2 id="configuration-type">Configuration type<a class="headerlink" href="#configuration-type" title="Permanent link">&para;</a></h2>
 <p>You have two options of configuring this script.</p>
 <ul>
-<li>Using .list files in <code class="codehilite"><span class="k">data</span></code></li>
+<li>Using .list files in <code class="codehilite"><span class="err">data</span></code></li>
 </ul>
 <div class="codehilite"><pre><span></span><span class="go">  ./after-effects --lists</span>
 </pre></div>
@@ -952,9 +952,9 @@
 </details>
 <p>Following details should explain the behavior of this flag. Please do have a look at exceptions, as all tasks cannot be simulated.</p>
 <ul>
-<li>This option will simulate installing packages mentioned in the config, using the apt-get in-built dry-run option <code class="codehilite"><span class="n">apt</span><span class="o">-</span><span class="k">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">s</span></code> to simulate the installation of packages.</li>
+<li>This option will simulate installing packages mentioned in the config, using the apt-get in-built dry-run option <code class="codehilite"><span class="err">apt-get install -s</span></code> to simulate the installation of packages.</li>
 <li>This option can be used to check if the files in the lists are compatible/available in the repository.</li>
-<li>Installation of DEB files also behaves similarly. It uses <code class="codehilite"><span class="n">dpkg</span> <span class="o">-</span><span class="n">i</span> <span class="c1">--dry-run</span></code> to simulate installation.</li>
+<li>Installation of DEB files also behaves similarly. It uses <code class="codehilite"><span class="err">dpkg -i --dry-run</span></code> to simulate installation.</li>
 <li>Its a very good idea to simulate installation when you have reconfigured the apps and packages in the list to check what might be error prone.</li>
 <li>DEB package files, binaries <strong>will</strong> be downloaded unlike apt-get package installs.</li>
 </ul>
@@ -965,7 +965,7 @@
 <li>Python package installation cannot be simulated. (pip lacks support for it) The script will skip installing apt dependencies and python packages, if simulate option is used.</li>
 <li>APT package upgrades and apt repository metadata updates cannot be simulated. Only a list of packages will be shown inn the logs.</li>
 <li>Simulate flag will <strong>NOT</strong> simulate installing dependencies for adding or deleting repositories and PPAs.</li>
-<li>Please do not set <code class="codehilite"><span class="n">CI</span><span class="o">=</span><span class="ss">&quot;true&quot;</span><span class="o">``</span> <span class="k">and</span></code>TRAVIS="true"` in environment variables as they are reserved for testing and CI. They do not abide by the rules mentioned above.</li>
+<li>Please do not set <code class="codehilite"><span class="err">CI=&quot;true&quot;`` and</span></code>TRAVIS="true"` in environment variables as they are reserved for testing and CI. They do not abide by the rules mentioned above.</li>
 </ul>
 </details>
 <h2 id="skip-version-checks">Skip Version Checks<a class="headerlink" href="#skip-version-checks" title="Permanent link">&para;</a></h2>
@@ -1003,8 +1003,8 @@ This will also disable reporting usage stats.</p>
 <ul>
 <li>By default this option is disabled.</li>
 <li>Repositories like Spotify and Google Chrome do not use code names in their repository URLs. So the above workaround is not necessary.</li>
-<li>Derivatives of Ubuntu will use the code name of Ubuntu on which they are based. For example Linux mint 18.2 Serena will use code name <code class="codehilite"><span class="n">xenial</span></code> as it is based on Ubuntu 16.04 Xenial Xerus</li>
-<li>This option applies only for the latest release mentioned in the variable <code class="codehilite"><span class="n">code_name_latest_release</span></code>. and will be ignored if the release is not latest.</li>
+<li>Derivatives of Ubuntu will use the code name of Ubuntu on which they are based. For example Linux mint 18.2 Serena will use code name <code class="codehilite"><span class="err">xenial</span></code> as it is based on Ubuntu 16.04 Xenial Xerus</li>
+<li>This option applies only for the latest release mentioned in the variable <code class="codehilite"><span class="err">code_name_latest_release</span></code>. and will be ignored if the release is not latest.</li>
 </ul>
 <h2 id="fix-fallback-to-lts">Fix fallback to LTS<a class="headerlink" href="#fix-fallback-to-lts" title="Permanent link">&para;</a></h2>
 <div class="admonition snippet">
@@ -1013,11 +1013,11 @@ This will also disable reporting usage stats.</p>
 </pre></div>
 
 </div>
-<p>Use LTS as fallback. This flag should be used in conjunction with <code class="codehilite"><span class="c1">--fix</span></code> Otherwise it will be ignored. Instead of using previous Ubuntu release this will use the Last LTS release. i.e if you are on disco and use this bionic repositories will be used. Please use this with caution as it may not work.</p>
+<p>Use LTS as fallback. This flag should be used in conjunction with <code class="codehilite"><span class="err">--fix</span></code> Otherwise it will be ignored. Instead of using previous Ubuntu release this will use the Last LTS release. i.e if you are on disco and use this bionic repositories will be used. Please use this with caution as it may not work.</p>
 <details class="danger"><summary>Note for Pre-Release/ development version of Ubuntu/Debian</summary><ul>
-<li>If you are using a pre-release version of Ubuntu, you can use <code class="codehilite"><span class="c1">--pre-release</span></code> flag to apply the above mentioned fix to pre-release version of Ubuntu.</li>
-<li>This flag can be used independent of <code class="codehilite"><span class="c1">--fix</span></code>. If both are used together then both flags will be applied if the release is upcoming-release.</li>
-<li>If the release is stable, only <code class="codehilite"><span class="c1">--fix</span></code> flag will be valid and <code class="codehilite"><span class="c1">--pre-release</span></code> is ignored.</li>
+<li>If you are using a pre-release version of Ubuntu, you can use <code class="codehilite"><span class="err">--pre-release</span></code> flag to apply the above mentioned fix to pre-release version of Ubuntu.</li>
+<li>This flag can be used independent of <code class="codehilite"><span class="err">--fix</span></code>. If both are used together then both flags will be applied if the release is upcoming-release.</li>
+<li>If the release is stable, only <code class="codehilite"><span class="err">--fix</span></code> flag will be valid and <code class="codehilite"><span class="err">--pre-release</span></code> is ignored.</li>
 <li>Eg:  If the repositories are  not available for latest stable release as well, go back a release. Ex. If the pre-release is 18.04 and the repositories is not available for 17.10 as well, we use 17.04 repositories. Usually happens in first few days of development cycle of 18.04.</li>
 </ul>
 </details>
@@ -1054,7 +1054,7 @@ This will also disable reporting usage stats.</p>
 <p>Just a quick way to delete logs generated by this script.</p>
 <div class="admonition warning">
 <p class="admonition-title">Flag priority</p>
-<p>If you pass <code class="codehilite"><span class="o">-</span><span class="n">l</span></code>  rest of the commands will be ignored, as the script exits after deleting the log!</p>
+<p>If you pass <code class="codehilite"><span class="err">-l</span></code>  rest of the commands will be ignored, as the script exits after deleting the log!</p>
 </div>
 <h2 id="keep-downloaded-deb-files">Keep downloaded DEB files<a class="headerlink" href="#keep-downloaded-deb-files" title="Permanent link">&para;</a></h2>
 <div class="admonition snippet">
@@ -1076,14 +1076,14 @@ Default behavior is to clean apt cache and delete downloaded DEB packages.</p>
 <h2 id="hide-configuration-data">Hide configuration data<a class="headerlink" href="#hide-configuration-data" title="Permanent link">&para;</a></h2>
 <div class="admonition snippet">
 <p class="admonition-title">Usage</p>
-<div class="codehilite"><pre><span></span><span class="p">.</span><span class="o">/</span><span class="k">after</span><span class="o">-</span><span class="n">effects</span> <span class="c1">--hide-config</span>
+<div class="codehilite"><pre><span></span><span class="err">./after-effects --hide-config</span>
 </pre></div>
 
 </div>
 <p>OR</p>
-<div class="codehilite"><pre><span></span><span class="o">```</span><span class="n">console</span>
-<span class="p">.</span><span class="o">/</span><span class="k">after</span><span class="o">-</span><span class="n">effects</span> <span class="o">-</span><span class="n">H</span>
-<span class="o">```</span>
+<div class="codehilite"><pre><span></span><span class="err">```console</span>
+<span class="err">./after-effects -H</span>
+<span class="err">```</span>
 </pre></div>
 
 
@@ -1114,7 +1114,7 @@ It is advised that you switch to YAML though. Not all options are supported with
 </div>
 <p>You can prefer using custom configuration file you have stored locally [It should be available via local paths or network share. not via ftp or http].</p>
 <h2 id="use-custom-version-information-file">Use Custom Version information file<a class="headerlink" href="#use-custom-version-information-file" title="Permanent link">&para;</a></h2>
-<p>Script always checks if its running the latest version available. If not it throws an error and exits. If you wish to skip that, please use <code class="codehilite"><span class="c1">--no-version-check</span></code>. This is always recommended over using a custom version information file. However it is possible to provide a custom version info file, a YAML file which holds version information.</p>
+<p>Script always checks if its running the latest version available. If not it throws an error and exits. If you wish to skip that, please use <code class="codehilite"><span class="err">--no-version-check</span></code>. This is always recommended over using a custom version information file. However it is possible to provide a custom version info file, a YAML file which holds version information.</p>
 <div class="admonition snippet">
 <p class="admonition-title">Usage</p>
 <div class="codehilite"><pre><span></span><span class="go">./after-effects --version-file &lt;filename&gt;</span>
@@ -1125,7 +1125,7 @@ It is advised that you switch to YAML though. Not all options are supported with
 </pre></div>
 
 </div>
-<p>Example version file is in <code class="codehilite"><span class="n">config</span></code> directory. All the fields are mandatory.</p>
+<p>Example version file is in <code class="codehilite"><span class="err">config</span></code> directory. All the fields are mandatory.</p>
 <h2 id="remote-yaml-configuration-file">Remote YAML configuration file<a class="headerlink" href="#remote-yaml-configuration-file" title="Permanent link">&para;</a></h2>
 <div class="admonition snippet">
 <p class="admonition-title">Usage</p>
@@ -1143,7 +1143,7 @@ It is advised that you switch to YAML though. Not all options are supported with
 <ul>
 <li>If using GitHub gists, please provide raw gist URL.</li>
 <li>You should only use trusted remote configurations. As its a bash script a malicious remote configuration can cause remote code to execute on your system.</li>
-<li>Please use <code class="codehilite"><span class="n">https</span></code></li>
+<li>Please use <code class="codehilite"><span class="err">https</span></code></li>
 </ul>
 </div>
 <h2 id="do-not-report-statistics">Do not report statistics<a class="headerlink" href="#do-not-report-statistics" title="Permanent link">&para;</a></h2>
@@ -1187,8 +1187,8 @@ to it. If you run a search query on google, it probably collects more data than 
 to access it. The mirror may not work or be up-to date with upstream. Use this option only if you are inside Uni-Freiburg network and know what versions/libs are hosted on the mirror.</p>
 </div>
 <ul>
-<li>Uses mirrors from <code class="codehilite"><span class="n">University</span> <span class="k">of</span> <span class="n">Freiburg</span></code>. Only available for limited number of repositories. <strong>DO NOT</strong> use this option if you are not a faculty or student of Uni-Freiburg, as it may have un-intended side effects.</li>
-<li>Arguments: <code class="codehilite"><span class="c1">--use-uf-mirror</span></code>. This option is not tested on Travis builds.</li>
+<li>Uses mirrors from <code class="codehilite"><span class="err">University of Freiburg</span></code>. Only available for limited number of repositories. <strong>DO NOT</strong> use this option if you are not a faculty or student of Uni-Freiburg, as it may have un-intended side effects.</li>
+<li>Arguments: <code class="codehilite"><span class="err">--use-uf-mirror</span></code>. This option is not tested on Travis builds.</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1270,6 +1270,7 @@ to access it. The mirror may not work or be up-to date with upstream. Use this o
                 
                   
                 
+                
               
               
                 
@@ -1349,7 +1350,7 @@ to access it. The mirror may not work or be up-to date with upstream. Use this o
       
     </div>
     
-      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       

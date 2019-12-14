@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -46,7 +46,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -57,12 +57,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -1049,10 +1049,10 @@
 <li>Eoan Support</li>
 <li>Remove Kubernetes repo support. (kubespray/kubeadm works better)
 Minikube is still supported via binary method.</li>
-<li>Option to fallback to non LTS releases if using <code class="codehilite"><span class="c1">--fix</span></code></li>
-<li><code class="codehilite"><span class="c1">--pre-release</span></code> flag now supports Debian Bullseye</li>
+<li>Option to fallback to non LTS releases if using <code class="codehilite"><span class="err">--fix</span></code></li>
+<li><code class="codehilite"><span class="err">--pre-release</span></code> flag now supports Debian Bullseye</li>
 <li>Fix Gist URL not working(<a class="magiclink magiclink-github magiclink-issue" href="https://github.com/tprasadtp/ubuntu-post-install/issues/17" title="GitHub Issue: tprasadtp/ubuntu-post-install#17">#17</a>)</li>
-<li>Introduce <code class="codehilite"><span class="c1">--autopilot</span></code> flag</li>
+<li>Introduce <code class="codehilite"><span class="err">--autopilot</span></code> flag</li>
 <li>Introduce DEBUG modes(activated on DEBUG=1)</li>
 </ul>
 <h2 id="version-543">Version 5.4.3<a class="headerlink" href="#version-543" title="Permanent link">&para;</a></h2>
@@ -1139,7 +1139,7 @@ Minikube is still supported via binary method.</li>
 <li>Custom list of scripts can be run Before and after all the tasks.</li>
 <li>Add version checks, always run latest version</li>
 <li>Brand new documentation site</li>
-<li>Use <code class="codehilite"><span class="n">mkdocs</span></code> to generate documentation</li>
+<li>Use <code class="codehilite"><span class="err">mkdocs</span></code> to generate documentation</li>
 <li>Automatically push &amp; deploy to gh-pages</li>
 <li>Use Netlify to manage gh-pages site</li>
 <li>Check if script is in current directory, to avoid errors on hooks</li>
@@ -1159,7 +1159,7 @@ Minikube is still supported via binary method.</li>
 </ul>
 <h2 id="version-34">Version 3.4<a class="headerlink" href="#version-34" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Delete cached and downloaded DEBs. (Can be changed with <code class="codehilite"><span class="o">-</span><span class="n">k</span></code> flag )</li>
+<li>Delete cached and downloaded DEBs. (Can be changed with <code class="codehilite"><span class="err">-k</span></code> flag )</li>
 <li>Remove Gnome Specific stuff from default list</li>
 <li>Remove PPAs incompatible with bionic</li>
 <li>Bionic is supported with --pre-release flag only with default list.</li>
@@ -1189,7 +1189,7 @@ Minikube is still supported via binary method.</li>
 <li>Allow Bionic tests to fail on Travis CI.</li>
 <li>Dockerfiles &amp; tests for bionic.</li>
 <li>Inform in script if running on Upcoming release.</li>
-<li>Drop google-cloud-sdk from fix_repo_not_available. Use <code class="codehilite"><span class="c1">--pre-release</span></code> if using beta/alpha Ubuntu release.</li>
+<li>Drop google-cloud-sdk from fix_repo_not_available. Use <code class="codehilite"><span class="err">--pre-release</span></code> if using beta/alpha Ubuntu release.</li>
 <li>Add Visual studio to repos instead of deb files</li>
 <li>Rename logging directory to after-effects</li>
 </ul>
@@ -1199,7 +1199,7 @@ Minikube is still supported via binary method.</li>
 <li>Provide an option via command line to bypass the confirmation dialog for ci and automated environments or when its too annoying</li>
 <li>If the simulate option is selected then Only calculate the upgrade but do not perform upgrade.</li>
 <li>Added improved Simulate options. Helpful when just want to change somethings and test scripts without really downloading and installing packages</li>
-<li>Simulate option is by default false and can be toggled by passing <code class="codehilite"><span class="o">-</span><span class="n">s</span></code> or <code class="codehilite"><span class="c1">--simulate</span></code> while running the script via command line</li>
+<li>Simulate option is by default false and can be toggled by passing <code class="codehilite"><span class="err">-s</span></code> or <code class="codehilite"><span class="err">--simulate</span></code> while running the script via command line</li>
 <li>Do not Enable Canonical Partner repositories in Ubuntu derivatives as they are enabled in installer or are different than Ubuntu. This leaves Partner repositories as they were before</li>
 <li>Add Feature: Purge Unwanted Packages</li>
 <li>Improved logging . Redirecting errors and adding time-stamps works better.</li>
@@ -1221,6 +1221,7 @@ Minikube is still supported via binary method.</li>
 </ul>
                 
                   
+                
                 
               
               
@@ -1301,7 +1302,7 @@ Minikube is still supported via binary method.</li>
       
     </div>
     
-      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       

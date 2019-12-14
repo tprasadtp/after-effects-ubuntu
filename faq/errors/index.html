@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -46,7 +46,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -57,12 +57,12 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -785,7 +785,7 @@
 <p>Google 's GCSFuse is not yet available for cosmic/disco. Please see this
 <a href="https://github.com/GoogleCloudPlatform/gcsfuse/issues/319">Github issue</a> for a fix.</p>
 <h2 id="what-if-i-get-an-error-saying-unknown-distributionrelease">What if I get an error saying Unknown Distribution/Release?<a class="headerlink" href="#what-if-i-get-an-error-saying-unknown-distributionrelease" title="Permanent link">&para;</a></h2>
-<p>That usually means you are running a Distribution which is not supported or too old or a derivative which is not recognized by the script. However it also might be possible that <code class="codehilite"><span class="n">lsb</span><span class="o">-</span><span class="n">release</span></code> package is missing from your system. Since the script depends on it for determining what is the code-name of the release it will fail.
+<p>That usually means you are running a Distribution which is not supported or too old or a derivative which is not recognized by the script. However it also might be possible that <code class="codehilite"><span class="err">lsb-release</span></code> package is missing from your system. Since the script depends on it for determining what is the code-name of the release it will fail.
 You might see an error like this,</p>
 <div class="codehilite"><pre><span></span><span class="go">./after-effects: line 41: lsb_release: command not found</span>
 <span class="go">./after-effects: line 42: lsb_release: command not found</span>
@@ -806,7 +806,7 @@ You might see an error like this,</p>
 
 <ul>
 <li>It might also that you do not have <em>lsb-release</em> package installed. It happens usually on docker containers. See <a href="/faq/dependencies/#what-do-i-need-to-run-this">What are its dependencies? What do I need on my system to run this?</a></li>
-<li>Install <code class="codehilite"><span class="n">lsb</span><span class="o">-</span><span class="n">release</span></code> package using <code class="codehilite"><span class="n">apt</span><span class="o">-</span><span class="k">get</span> <span class="o">-</span><span class="n">y</span> <span class="n">install</span> <span class="n">lsb</span><span class="o">-</span><span class="n">release</span></code></li>
+<li>Install <code class="codehilite"><span class="err">lsb-release</span></code> package using <code class="codehilite"><span class="err">apt-get -y install lsb-release</span></code></li>
 <li>In the case above you are probably missing other dependencies as well. It might be a good idea to install those dependencies first.</li>
 </ul>
 <h2 id="what-if-i-get-an-error-saying-this-release-of-ubuntu-is-no-longer-supported">What if I get an error saying this release of Ubuntu is no longer supported?<a class="headerlink" href="#what-if-i-get-an-error-saying-this-release-of-ubuntu-is-no-longer-supported" title="Permanent link">&para;</a></h2>
@@ -825,7 +825,7 @@ You might see an error like this,</p>
 <span class="go">[     Error!    ] Error Getting file.</span>
 </pre></div>
 
-<p>Try running <code class="codehilite"><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">ae</span><span class="p">.</span><span class="n">prasadt</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="k">version</span><span class="p">.</span><span class="n">yml</span></code>. If you see SSL errors, that means that your CA bundle is out of date.
+<p>Try running <code class="codehilite"><span class="err">wget https://ae.prasadt.com/api/version.yml</span></code>. If you see SSL errors, that means that your CA bundle is out of date.
 This project uses Amazon Root CA &amp; LetsEncrypt for SSL, make sure that your system trusts these.</p>
 <h2 id="script-throws-a-bunch-of-errors-or-got-struck-or-hangs">Script throws a bunch of errors or got struck or hangs<a class="headerlink" href="#script-throws-a-bunch-of-errors-or-got-struck-or-hangs" title="Permanent link">&para;</a></h2>
 <div class="admonition question">
@@ -840,13 +840,14 @@ This project uses Amazon Root CA &amp; LetsEncrypt for SSL, make sure that your 
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>In rare cases where your script exited while installing a DEB file, which has unmet dependencies, you might see broken packages error. In that case, run <code class="codehilite"><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="k">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">f</span></code> to fix the broken packages and run the script again.</p>
+<p>In rare cases where your script exited while installing a DEB file, which has unmet dependencies, you might see broken packages error. In that case, run <code class="codehilite"><span class="err">sudo apt-get install -f</span></code> to fix the broken packages and run the script again.</p>
 </div>
 <h2 id="issues-not-mentioned-above">Issues not mentioned above?<a class="headerlink" href="#issues-not-mentioned-above" title="Permanent link">&para;</a></h2>
 <p>If you see any errors or script hangs/errors please do not hesitate to open an issue on <a href="https://github.com/tprasadtp/ubuntu-post-install/issues/new">Github</a>.</p>
 <p><img alt="GitHub issues" src="https://img.shields.io/github/issues/tprasadtp/ubuntu-post-install.svg" /></p>
                 
                   
+                
                 
               
               
@@ -927,7 +928,7 @@ This project uses Amazon Root CA &amp; LetsEncrypt for SSL, make sure that your 
       
     </div>
     
-      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       

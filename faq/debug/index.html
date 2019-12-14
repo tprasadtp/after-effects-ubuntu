@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -46,7 +46,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -57,12 +57,12 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -701,15 +701,15 @@
                 <h1 id="debugging-the-script">Debugging the script<a class="headerlink" href="#debugging-the-script" title="Permanent link">&para;</a></h1>
 <p>You can chose from multiple debug modes. by setting DEBUG variable to one of the following</p>
 <ul>
-<li><code class="codehilite"><span class="n">DEBUG</span><span class="o">=</span><span class="mi">1</span></code> Print debug messages</li>
-<li><code class="codehilite"><span class="n">DEBUG</span><span class="o">=</span><span class="n">internal</span></code> display some internal debug messages</li>
-<li><code class="codehilite"><span class="n">DEBUG</span><span class="o">=</span><span class="n">trace</span></code> Print debug, internal and also apt logs.
+<li><code class="codehilite"><span class="err">DEBUG=1</span></code> Print debug messages</li>
+<li><code class="codehilite"><span class="err">DEBUG=internal</span></code> display some internal debug messages</li>
+<li><code class="codehilite"><span class="err">DEBUG=trace</span></code> Print debug, internal and also apt logs.
 This can generate a lot of output.</li>
 </ul>
 <h2 id="local-testing">Local testing<a class="headerlink" href="#local-testing" title="Permanent link">&para;</a></h2>
-<p>You can use <code class="codehilite"><span class="p">.</span><span class="o">/</span><span class="n">tests</span><span class="o">/</span><span class="n">test</span><span class="o">-</span><span class="n">distro</span><span class="p">.</span><span class="n">sh</span></code> to test the scripts locally. It uses docker to build and test the script in simulate mode inside
-containers. This script requires two arguments <strong>distro name</strong> and <strong>release name</strong>. They are used as parameters to build the Docker image from dockerfile in <code class="codehilite"><span class="n">dockerfiles</span><span class="o">/</span><span class="n">tests</span></code>.eg.to test the script on Ubuntu 18.04 bionic, run it as
-<code class="codehilite"><span class="p">.</span><span class="o">/</span><span class="n">tests</span><span class="o">/</span><span class="n">test</span><span class="o">-</span><span class="n">distro</span><span class="p">.</span><span class="n">sh</span> <span class="n">ubuntu</span> <span class="n">bionic</span></code>. It will fetch and build the docker image and run the script in simulate mode using the config files at <code class="codehilite"><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="err">{</span><span class="n">branch</span><span class="o">-</span><span class="n">name</span><span class="err">}</span><span class="c1">--ubuntu-post-install.netlify.net/config/default.yml</span></code></p>
+<p>You can use <code class="codehilite"><span class="err">./tests/test-distro.sh</span></code> to test the scripts locally. It uses docker to build and test the script in simulate mode inside
+containers. This script requires two arguments <strong>distro name</strong> and <strong>release name</strong>. They are used as parameters to build the Docker image from dockerfile in <code class="codehilite"><span class="err">dockerfiles/tests</span></code>.eg.to test the script on Ubuntu 18.04 bionic, run it as
+<code class="codehilite"><span class="err">./tests/test-distro.sh ubuntu bionic</span></code>. It will fetch and build the docker image and run the script in simulate mode using the config files at <code class="codehilite"><span class="c">https://{branch-name}--ubuntu-post-install.netlify.net/config/default.yml</span></code></p>
 <p>Alternatively you can build the docker image yourself.</p>
 <div class="codehilite"><pre><span></span><span class="gp">$</span> <span class="nb">export</span> <span class="nv">distro</span><span class="o">=</span><span class="s2">&quot;ubuntu&quot;</span>
 <span class="gp">$</span> <span class="nb">export</span> <span class="nv">release</span><span class="o">=</span><span class="s2">&quot;bionic&quot;</span>
@@ -751,6 +751,7 @@ You can test the docs locally with provided docker-compose file.</p>
 <p>and navigate to localhost:8000 to view the documentation.</p>
                 
                   
+                
                 
               
               
@@ -831,7 +832,7 @@ You can test the docs locally with provided docker-compose file.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       

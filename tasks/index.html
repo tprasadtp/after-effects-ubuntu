@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -46,7 +46,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -57,12 +57,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -965,7 +965,7 @@
 </tr>
 </tbody>
 </table>
-<details class="tip"><summary>Using <code class="codehilite"><span class="c1">--fix</span></code> falg</summary><p>Please note that the above repositories are sometimes not updated for latest Ubuntu release and most certainly will not be available for upcoming release of Ubuntu(Alpha/Beta). It might take some time till the repositories are available for the latest release. Use -f or --fix command line option or --pre-release in case you are using a development version of Ubuntu to revert using latest available version of repositories (usually previous Ubuntu release or in case of Beta/Alpha latest stable release of Ubuntu). <a href="/clioptions/#fix-for-latest-ubuntu-releases">For more info see command line options.</a></p>
+<details class="tip"><summary>Using <code class="codehilite"><span class="err">--fix</span></code> falg</summary><p>Please note that the above repositories are sometimes not updated for latest Ubuntu release and most certainly will not be available for upcoming release of Ubuntu(Alpha/Beta). It might take some time till the repositories are available for the latest release. Use -f or --fix command line option or --pre-release in case you are using a development version of Ubuntu to revert using latest available version of repositories (usually previous Ubuntu release or in case of Beta/Alpha latest stable release of Ubuntu). <a href="/clioptions/#fix-for-latest-ubuntu-releases">For more info see command line options.</a></p>
 </details>
 <details class="tip"><summary>Controlling which repository is added using config file</summary><p>You can set your YML file to decide which repository is added. Some repositories may no be supported on your architecture or distribution. Take a look at <a href="/api/yaml">config.yml</a> for example. If you omit a value, it defaults to false <strong>ALWAYS</strong>. Do note that if you are using lists default values are different, they are mentioned in below.</p>
 </details>
@@ -1019,25 +1019,25 @@ your distro/version. You can find more info at <a href="http://wiki.ros.org/ROS/
 </ul>
 </div>
 <p>Example yaml configuration snippet is given below.</p>
-<div class="codehilite"><pre><span></span><span class="n">config</span><span class="p">:</span>
-  <span class="o">#</span> <span class="n">Enabled</span> <span class="n">Tasks</span>
-  <span class="n">tasks</span><span class="p">:</span>
-    <span class="k">update</span><span class="p">:</span> <span class="k">true</span>
-    <span class="o">#</span> <span class="k">Add</span> <span class="n">Repos</span>
-    <span class="o">#</span> <span class="n">individual</span> <span class="n">repos</span> <span class="n">flags</span> <span class="k">are</span> <span class="n">mentioned</span> <span class="k">under</span> <span class="n">config</span><span class="p">.</span><span class="n">add_repo</span> <span class="k">key</span>
-    <span class="n">repo</span><span class="p">:</span> <span class="k">true</span>
-  <span class="o">#</span> <span class="n">Repository</span> <span class="n">Flags</span>
-  <span class="n">add_repo</span><span class="p">:</span>
-    <span class="n">winehq</span><span class="p">:</span> <span class="k">true</span>
-    <span class="n">docker</span><span class="p">:</span> <span class="k">true</span>
-    <span class="n">mendeley</span><span class="p">:</span> <span class="k">false</span>
-    <span class="n">googlecloud</span><span class="p">:</span> <span class="k">true</span>
-    <span class="n">spotify</span><span class="p">:</span> <span class="k">true</span>
-    <span class="n">vscode</span><span class="p">:</span> <span class="k">true</span>
-    <span class="n">skype</span><span class="p">:</span> <span class="k">true</span>
-    <span class="n">signal</span><span class="p">:</span> <span class="k">false</span>
-    <span class="n">insync</span><span class="p">:</span> <span class="k">true</span>
-    <span class="n">google</span><span class="p">:</span> <span class="k">true</span>
+<div class="codehilite"><pre><span></span><span class="c">config:</span>
+<span class="c">  # Enabled Tasks</span>
+<span class="c">  tasks:</span>
+<span class="c">    update: true</span>
+<span class="c">    # Add Repos</span>
+<span class="c">    # individual repos flags are mentioned under config.add_repo key</span>
+<span class="c">    repo: true</span>
+<span class="c">  # Repository Flags</span>
+<span class="c">  add_repo:</span>
+<span class="c">    winehq: true</span>
+<span class="c">    docker: true</span>
+<span class="c">    mendeley: false</span>
+<span class="c">    googlecloud: true</span>
+<span class="c">    spotify: true</span>
+<span class="c">    vscode: true</span>
+<span class="c">    skype: true</span>
+<span class="c">    signal: false</span>
+<span class="c">    insync: true</span>
+<span class="c">    google: true</span>
 </pre></div>
 
 <h3 id="canonical-partner-repositories">Canonical partner repositories<a class="headerlink" href="#canonical-partner-repositories" title="Permanent link">&para;</a></h3>
@@ -1052,9 +1052,9 @@ your distro/version. You can find more info at <a href="http://wiki.ros.org/ROS/
 </div>
 <h2 id="add-personal-package-archives-ppa">Add personal package archives (PPA)<a class="headerlink" href="#add-personal-package-archives-ppa" title="Permanent link">&para;</a></h2>
 <ul>
-<li>PPAs can be added using the configuration file in data directory <code class="codehilite"><span class="p">.</span><span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="n">ppa</span><span class="p">.</span><span class="n">list</span></code> or in the YML file.</li>
-<li>Only one ppa entry per line (No comments or anything else anywhere in the file) in the format ppa:{author}/{ppa} for example <code class="codehilite"><span class="nv">ppa</span>:<span class="nv">mozillateam</span><span class="o">/</span><span class="nv">firefox</span><span class="o">-</span><span class="k">next</span></code> The file will be read and the PPAs will be added from the list.</li>
-<li>Logs will  show entry in the format <code class="codehilite"><span class="p">[</span><span class="nb">date</span> <span class="k">and</span> <span class="n">time</span><span class="p">]</span> <span class="p">[</span>  <span class="n">PPA</span><span class="o">-</span><span class="n">Logs</span>  <span class="p">]</span> <span class="o">&lt;</span><span class="n">log</span><span class="o">&gt;</span></code></li>
+<li>PPAs can be added using the configuration file in data directory <code class="codehilite"><span class="err">./data/ppa.list</span></code> or in the YML file.</li>
+<li>Only one ppa entry per line (No comments or anything else anywhere in the file) in the format ppa:{author}/{ppa} for example <code class="codehilite"><span class="n">ppa</span><span class="o">:</span><span class="n">mozillateam</span><span class="o">/</span><span class="n">firefox</span><span class="o">-</span><span class="n">next</span></code> The file will be read and the PPAs will be added from the list.</li>
+<li>Logs will  show entry in the format <code class="codehilite"><span class="err">[date and time] [  PPA-Logs  ] &lt;log&gt;</span></code></li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1091,19 +1091,19 @@ while writing configs and editing them. Its advised to follow it if your configs
 tend to get to couple of hundreds of lines. Also YAML file should be a valid YAML &amp; indented by 2 spaces.</p>
 <h3 id="special-list-purge-list">Special list - Purge list<a class="headerlink" href="#special-list-purge-list" title="Permanent link">&para;</a></h3>
 <p>There is a special package list under key, config.purge or purge.list, which contains list of apt packages to be
-purged from the system. Make sure that all the packages in the lists are available for your release. Using <code class="codehilite"><span class="o">-</span><span class="n">s</span></code> command line option helps. Also check for the logs for any errors or conflicts.</p>
+purged from the system. Make sure that all the packages in the lists are available for your release. Using <code class="codehilite"><span class="err">-s</span></code> command line option helps. Also check for the logs for any errors or conflicts.</p>
 <h2 id="install-debian-package-archives-deb-files">Install Debian package archives (.deb files)<a class="headerlink" href="#install-debian-package-archives-deb-files" title="Permanent link">&para;</a></h2>
-<p>This will install deb files specified in the list <code class="codehilite"><span class="n">deb</span><span class="p">.</span><span class="n">list</span></code> or YAML config under <code class="codehilite"><span class="n">config</span><span class="p">.</span><span class="n">install</span><span class="p">.</span><span class="n">debian_packages</span></code>.</p>
+<p>This will install deb files specified in the list <code class="codehilite"><span class="err">deb.list</span></code> or YAML config under <code class="codehilite"><span class="err">config.install.debian_packages</span></code>.</p>
 <ul>
-<li>Logs will  show entry in the format <code class="codehilite"><span class="p">[</span><span class="o">&lt;</span><span class="nb">date</span> <span class="k">and</span> <span class="n">time</span><span class="o">&gt;</span><span class="p">]</span> <span class="p">[</span>  <span class="n">PKG</span>  <span class="p">]</span> <span class="o">&lt;</span><span class="n">log</span><span class="o">&gt;</span></code> for dpkg actions and</li>
-<li>APT Logs will  show entry in the format <code class="codehilite"><span class="p">[</span><span class="o">&lt;</span><span class="nb">date</span> <span class="k">and</span> <span class="n">time</span><span class="o">&gt;</span><span class="p">]</span> <span class="p">[</span>  <span class="n">APT</span>  <span class="p">]</span> <span class="o">&lt;</span><span class="n">log</span><span class="o">&gt;</span></code> for actions performed by apt commands. (<code class="codehilite"><span class="n">apt</span><span class="o">-</span><span class="k">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">f</span></code> for missing packages)</li>
-<li><strong>Simulate</strong> option will use <code class="codehilite"><span class="c1">--dry-run</span></code> option in dpkg to Simulate DEB installation.</li>
-<li>Configuration file is a <code class="codehilite"><span class="n">csv</span></code> file without headers. first column corresponds to URL ans the second field the file name under which the file is saved.</li>
+<li>Logs will  show entry in the format <code class="codehilite"><span class="err">[&lt;date and time&gt;] [  PKG  ] &lt;log&gt;</span></code> for dpkg actions and</li>
+<li>APT Logs will  show entry in the format <code class="codehilite"><span class="err">[&lt;date and time&gt;] [  APT  ] &lt;log&gt;</span></code> for actions performed by apt commands. (<code class="codehilite"><span class="err">apt-get install -f</span></code> for missing packages)</li>
+<li><strong>Simulate</strong> option will use <code class="codehilite"><span class="err">--dry-run</span></code> option in dpkg to Simulate DEB installation.</li>
+<li>Configuration file is a <code class="codehilite"><span class="err">csv</span></code> file without headers. first column corresponds to URL ans the second field the file name under which the file is saved.</li>
 <li>Each DEB file to be installed should have following entry.</li>
-<li>URL to the deb file which can be accessed using wget<code class="codehilite"><span class="p">,</span></code>Name of the deb file without any spaces or special chars except hyphen.</li>
+<li>URL to the deb file which can be accessed using wget<code class="codehilite"><span class="err">,</span></code>Name of the deb file without any spaces or special chars except hyphen.</li>
 <li>For example to install Atom Editor the entry should look like below.</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">atom</span><span class="o">-</span><span class="n">installer</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">v1</span><span class="p">.</span><span class="mi">21</span><span class="p">.</span><span class="mi">1</span><span class="o">/</span><span class="n">atom</span><span class="o">-</span><span class="n">amd64</span><span class="p">.</span><span class="n">deb</span><span class="p">,</span><span class="n">ATOM</span><span class="o">-</span><span class="n">Editor</span><span class="p">.</span><span class="n">deb</span>
+<div class="codehilite"><pre><span></span><span class="c">https://atom-installer.github.com/v1.21.1/atom-amd64.deb,ATOM-Editor.deb</span>
 </pre></div>
 
 <div class="codehilite"><pre><span></span><span class="nt">config</span><span class="p">:</span>
@@ -1120,15 +1120,15 @@ purged from the system. Make sure that all the packages in the lists are availab
 <p>Please note that deb file will be  saved with the name mentioned in the file. (DEB file is named <strong>exactly</strong> as mentioned in the second field. So if you want them to be named with extension .deb include that in the second field and avoid illegal chars)</p>
 </div>
 <h2 id="install-static-binaries-to-usrlocalbin">Install Static binaries to /usr/local/bin<a class="headerlink" href="#install-static-binaries-to-usrlocalbin" title="Permanent link">&para;</a></h2>
-<p>This will install binaries <code class="codehilite"><span class="n">bin</span><span class="p">.</span><span class="n">list</span></code> or YAML config under <code class="codehilite"><span class="n">config</span><span class="p">.</span><span class="n">install</span><span class="p">.</span><span class="n">binaries</span></code>.</p>
+<p>This will install binaries <code class="codehilite"><span class="err">bin.list</span></code> or YAML config under <code class="codehilite"><span class="err">config.install.binaries</span></code>.</p>
 <ul>
 <li><strong>Simulate</strong> option <strong>will</strong> download the package but not install it.</li>
-<li>Configuration file is a <code class="codehilite"><span class="n">csv</span></code> file without headers. first column corresponds to URL ans the second field the file name under which the file is saved.</li>
+<li>Configuration file is a <code class="codehilite"><span class="err">csv</span></code> file without headers. first column corresponds to URL ans the second field the file name under which the file is saved.</li>
 <li>Each DEB file to be installed should have following entry.</li>
-<li>URL to the deb file which can be accessed using wget<code class="codehilite"><span class="p">,</span></code>Name of the deb file without any spaces or special chars except hyphen.</li>
-<li>For example, to install <code class="codehilite"><span class="n">kompose</span></code>, the entry should look like below.</li>
+<li>URL to the deb file which can be accessed using wget<code class="codehilite"><span class="err">,</span></code>Name of the deb file without any spaces or special chars except hyphen.</li>
+<li>For example, to install <code class="codehilite"><span class="err">kompose</span></code>, the entry should look like below.</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">kubernetes</span><span class="o">/</span><span class="n">kompose</span><span class="o">/</span><span class="n">releases</span><span class="o">/</span><span class="n">download</span><span class="o">/</span><span class="n">v1</span><span class="p">.</span><span class="mi">19</span><span class="p">.</span><span class="mi">0</span><span class="o">/</span><span class="n">kompose</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">amd64</span><span class="p">,</span><span class="n">kompose</span>
+<div class="codehilite"><pre><span></span><span class="c">https://github.com/kubernetes/kompose/releases/download/v1.19.0/kompose-linux-amd64,kompose</span>
 </pre></div>
 
 <div class="codehilite"><pre><span></span><span class="nt">config</span><span class="p">:</span>
@@ -1145,11 +1145,11 @@ purged from the system. Make sure that all the packages in the lists are availab
 <p>Please note that file will be saved with the name mentioned in the file and will be in your path.</p>
 </div>
 <h2 id="install-python-packages-via-pip">Install python packages (via pip)<a class="headerlink" href="#install-python-packages-via-pip" title="Permanent link">&para;</a></h2>
-<p>This will install system wide python packages using pip. There are two lists. <code class="codehilite"><span class="n">pip</span><span class="p">.</span><span class="n">list</span></code> and <code class="codehilite"><span class="n">pip3</span><span class="p">.</span><span class="n">list</span></code> for python 2 and python 3 respectively. Alternatively you can specify in YAML config under <code class="codehilite"><span class="n">config</span><span class="p">.</span><span class="n">install</span><span class="p">.</span><span class="n">python2</span></code> or <code class="codehilite"><span class="n">config</span><span class="p">.</span><span class="n">install</span><span class="p">.</span><span class="n">python3</span></code>
-This task requires <code class="codehilite"><span class="n">python</span><span class="o">-</span><span class="n">pip</span> <span class="n">package</span></code> is installed, If not , will be installed anyway.</p>
+<p>This will install system wide python packages using pip. There are two lists. <code class="codehilite"><span class="err">pip.list</span></code> and <code class="codehilite"><span class="err">pip3.list</span></code> for python 2 and python 3 respectively. Alternatively you can specify in YAML config under <code class="codehilite"><span class="err">config.install.python2</span></code> or <code class="codehilite"><span class="err">config.install.python3</span></code>
+This task requires <code class="codehilite"><span class="err">python-pip package</span></code> is installed, If not , will be installed anyway.</p>
 <ul>
 <li>The list files follow similar configuration as package list files. One item per line. however you can specify version requirements as you would for requirements file.</li>
-<li>Simulate flag will skip installing packages, unless <code class="codehilite"><span class="n">CI</span><span class="o">=</span><span class="k">true</span></code>.</li>
+<li>Simulate flag will skip installing packages, unless <code class="codehilite"><span class="err">CI=true</span></code>.</li>
 </ul>
 <p>Example configuration is given below.</p>
 <div class="codehilite"><pre><span></span><span class="nt">config</span><span class="p">:</span>
@@ -1167,12 +1167,12 @@ This task requires <code class="codehilite"><span class="n">python</span><span c
 <h2 id="purge-unwanted-packages">Purge Unwanted Packages<a class="headerlink" href="#purge-unwanted-packages" title="Permanent link">&para;</a></h2>
 <p>This will purge Unwanted packages from the system.</p>
 <ul>
-<li>The packages mentioned in the list purge.list or under <code class="codehilite"><span class="n">config</span><span class="p">.</span><span class="n">purge</span></code> in yaml will be purged</li>
+<li>The packages mentioned in the list purge.list or under <code class="codehilite"><span class="err">config.purge</span></code> in yaml will be purged</li>
 <li>The format of the purge.list is similar to that of packages, one packages per line of the file and no comments or anything else.</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>It is necessary to pass command line argument <code class="codehilite"><span class="o">-</span><span class="n">d</span></code> or <code class="codehilite"><span class="c1">--deboalt</span></code> to run this task if you are using lists mode. With YML you can set the flag  <code class="codehilite"><span class="n">config</span><span class="p">.</span><span class="n">flags</span><span class="p">.</span><span class="n">purge_enabled</span><span class="p">:</span> <span class="k">true</span></code> in config and <code class="codehilite"><span class="o">-</span><span class="n">d</span></code> is not necessary.</p>
+<p>It is necessary to pass command line argument <code class="codehilite"><span class="err">-d</span></code> or <code class="codehilite"><span class="err">--deboalt</span></code> to run this task if you are using lists mode. With YML you can set the flag  <code class="codehilite"><span class="err">config.flags.purge_enabled: true</span></code> in config and <code class="codehilite"><span class="err">-d</span></code> is not necessary.</p>
 </div>
 <h2 id="reset-repositories-purge-ppas">Reset repositories / Purge PPAs<a class="headerlink" href="#reset-repositories-purge-ppas" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1186,8 +1186,8 @@ This task requires <code class="codehilite"><span class="n">python</span><span c
 </div>
 <h2 id="installing-snap-packages">Installing Snap packages<a class="headerlink" href="#installing-snap-packages" title="Permanent link">&para;</a></h2>
 <p>Script can install snap packages from snapstore. For example check the default config file.
-You should specify the classic snaps under <code class="codehilite"><span class="n">install</span><span class="p">.</span><span class="n">snaps</span><span class="p">.</span><span class="n">calssic</span></code>,
-edge snaps under <code class="codehilite"><span class="n">install</span><span class="p">.</span><span class="n">snaps</span><span class="p">.</span><span class="n">edge</span></code> and normal snaps under <code class="codehilite"><span class="n">install</span><span class="p">.</span><span class="n">snaps</span><span class="p">.</span><span class="n">normal</span></code> in the yaml file.</p>
+You should specify the classic snaps under <code class="codehilite"><span class="err">install.snaps.calssic</span></code>,
+edge snaps under <code class="codehilite"><span class="err">install.snaps.edge</span></code> and normal snaps under <code class="codehilite"><span class="err">install.snaps.normal</span></code> in the yaml file.</p>
 <div class="codehilite"><pre><span></span><span class="nt">config</span><span class="p">:</span>
   <span class="nt">install</span><span class="p">:</span>
     <span class="nt">snaps</span><span class="p">:</span>
@@ -1220,7 +1220,7 @@ edge snaps under <code class="codehilite"><span class="n">install</span><span cl
 <p>This option will honor --autopilot and --simulate options as individual tasks would do if used with YAML. Lists mode does not
 support for selecting individual tasks.</p>
 <h2 id="autopilot-mode">AUTOPILOT Mode<a class="headerlink" href="#autopilot-mode" title="Permanent link">&para;</a></h2>
-<p>Setting <code class="codehilite"><span class="n">AUTOPILOT</span><span class="o">=</span><span class="k">true</span></code> or passing <code class="codehilite"><span class="c1">--autopilot</span></code> will skip all UI prompts and confirmations and run ALL In One.</p>
+<p>Setting <code class="codehilite"><span class="err">AUTOPILOT=true</span></code> or passing <code class="codehilite"><span class="err">--autopilot</span></code> will skip all UI prompts and confirmations and run ALL In One.</p>
 <p>This mode requires you to specify tasks to be run if using YAML config. Example snippet is given below.</p>
 <div class="codehilite"><pre><span></span><span class="nt">config</span><span class="p">:</span>
   <span class="c1"># Enabled Tasks</span>
@@ -1245,13 +1245,14 @@ support for selecting individual tasks.</p>
 <h2 id="delete-logs">Delete logs<a class="headerlink" href="#delete-logs" title="Permanent link">&para;</a></h2>
 <p>A log file is generated containing all the output generated by the apt and other commands and contain generic information and errors .</p>
 <ul>
-<li>This task will delete the log file <code class="codehilite"><span class="k">after</span><span class="o">-</span><span class="n">effects</span><span class="p">.</span><span class="n">log</span></code>.</li>
-<li>Log file is located in the directory <code class="codehilite"><span class="n">logs</span></code> in folder which you ran thin script.</li>
+<li>This task will delete the log file <code class="codehilite"><span class="err">after-effects.log</span></code>.</li>
+<li>Log file is located in the directory <code class="codehilite"><span class="err">logs</span></code> in folder which you ran thin script.</li>
 <li>Sometimes errors might not be written to log file but displayed on screen and vice-versa.</li>
 <li>Please verify that everything went okay before deleting the logs.</li>
 </ul>
                 
                   
+                
                 
               
               
@@ -1332,7 +1333,7 @@ support for selecting individual tasks.</p>
       
     </div>
     
-      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
