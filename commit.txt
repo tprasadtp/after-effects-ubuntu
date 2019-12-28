@@ -1,3 +1,10 @@
-SRC Commit ID  : 991213d
-SRC Message    : chore(deps): bump pymdown-extensions from 6.2 to 6.2.1 in /docs (#36)
+SRC Commit ID  : b0671f3
+SRC Message    : chore(deps): bump yamllint from 1.19.0 to 1.20.0 in /docs (#37)
+
+Bumps [yamllint](https://github.com/adrienverge/yamllint) from 1.19.0 to 1.20.0.
+- [Release notes](https://github.com/adrienverge/yamllint/releases)
+- [Changelog](https://github.com/adrienverge/yamllint/blob/master/CHANGELOG.rst)
+- [Commits](https://github.com/adrienverge/yamllint/compare/v1.19.0...v1.20.0)
+
+Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
 Built from     : master
