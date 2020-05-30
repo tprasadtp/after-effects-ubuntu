@@ -1,3 +1,0 @@
-SRC Commit ID  : 59bf0d1
-SRC Message    : disable yaml lint
-Built from     : master
