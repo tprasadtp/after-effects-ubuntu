@@ -1,13 +1,13 @@
 {
   "commit": {
-    "id": "119f726",
-    "ref": "refs/tags/v6.0.0-rc3"
+    "id": "8927689",
+    "ref": "refs/tags/v6.0.0-rc4"
   },
   "build": {
-    "number": "120609874",
+    "number": "122960910",
     "actor": "tprasadtp",
     "workflow": "release",
     "event": "push"
   },
-  "ts": "Sun May 31 13:28:28 UTC 2020"
+  "ts": "Tue Jun  2 20:31:47 UTC 2020"
 }
