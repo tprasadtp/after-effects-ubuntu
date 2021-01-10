@@ -1,13 +1,13 @@
 {
   "commit": {
-    "id": "fcabec6",
-    "ref": "refs/tags/v6.2.0-rc1"
+    "id": "ff32d08",
+    "ref": "refs/tags/v6.3.0"
   },
   "build": {
-    "number": "462647033",
+    "number": "24",
     "actor": "tprasadtp",
     "workflow": "release",
     "event": "push"
   },
-  "ts": "Tue Jan  5 05:12:31 UTC 2021"
+  "ts": "Sun Jan 10 00:05:18 UTC 2021"
 }
